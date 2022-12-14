@@ -9,42 +9,54 @@ import SwiftUI
 
 extension AuthorizationView {
     var loginPassView: some View {
-        VStack(spacing: 28)  {
-            HStack {
+        VStack(spacing: 14)  {
+            HStack(spacing: 11) {
+                Image("Login")
+                    .frame(width: 21, height: 25)
+                    .foregroundColor(.blue)
+                    .padding(.leading, 11)
                 TextField("", text: $viewModel.username)
                     .autocapitalization(.none)
-                    .padding(10)
                     .placeholder(when: viewModel.username.isEmpty, placeholder: {
                         Text("Логин")
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: .zero,
-                                                leading: 16,
-                                                bottom: .zero,
-                                                trailing: 16))
+                            .foregroundColor(.gray)
                     })
                     .frame(height: 56, alignment: .center)
-                    .accentColor(.white)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                    .accentColor(.blue)
             }
+            .background(Rectangle()
+                .fill(Color.white)
+                .cornerRadius(10)
+                .shadow(
+                    color: Color.gray.opacity(0.7),
+                    radius: 3,
+                    x: 0,
+                    y: 0
+                ))
             HStack {
-                SecureField("", text: $viewModel.password)
-                    .autocapitalization(.none)
-                    .padding(10)
-                    .placeholder(when: viewModel.password.isEmpty, placeholder: {
-                        Text("Пароль")
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: .zero,
-                                                leading: 16,
-                                                bottom: .zero,
-                                                trailing: 16))
-                    })
-                    .frame(height: 56, alignment: .center)
-                    .accentColor(.white)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
+                HStack(spacing: 11) {
+                    Image("Password")
+                        .frame(width: 21, height: 25)
+                        .foregroundColor(.blue)
+                        .padding(.leading, 11)
+                    SecureField("", text: $viewModel.password)
+                        .autocapitalization(.none)
+                        .placeholder(when: viewModel.password.isEmpty, placeholder: {
+                            Text("Пароль")
+                                .foregroundColor(.gray)
+                        })
+                        .frame(height: 56, alignment: .center)
+                        .accentColor(.blue)
+                }
+                .background(Rectangle()
+                    .fill(Color.white)
                     .cornerRadius(10)
+                    .shadow(
+                        color: Color.gray.opacity(0.7),
+                        radius: 3,
+                        x: 0,
+                        y: 0
+                    ))
             }
         }
     }

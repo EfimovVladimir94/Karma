@@ -13,40 +13,21 @@ struct AuthorizationView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                Spacer()
                 Image("LaunchLogo")
                     .frame(width: 227, height: 157, alignment: .center)
-                    .padding(.bottom, 34)
+                    .padding(.top, 70)
                 loginPassView
-                    .padding(.bottom, 18)
-                Text("Регистрация")
-                    .foregroundColor(.black)
-                    .font(.bold(20))
-                    .padding(.bottom, 7)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                Text("Авторизироваться через соц. сети")
-                    .foregroundColor(.black)
-                    .font(.medium(13))
-                    .padding(.bottom, 7)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                HStack(spacing: 15) {
-                    Image("Instagram")
-                        .frame(width: 42, height: 42, alignment: .center)
-                        .background(Circle.init().foregroundColor(.blue))
-                        .onTapGesture {
-                        }
-                    Image("Instagram")
-                        .frame(width: 42, height: 42, alignment: .center)
-                        .background(Circle.init().foregroundColor(.blue))
-                        .onTapGesture {
-                        }
-                    Image("Google")
-                        .frame(width: 42, height: 42, alignment: .center)
-                        .background(Circle.init().foregroundColor(.blue))
-                        .onTapGesture {
-                        }
+                    .padding(.top, 21)
+                HStack {
+                    Text("Забыли пароль?")
+                        .foregroundColor(.black)
+                        .font(.medium(15))
+                    Text("Нажмите сюда")
+                        .foregroundColor(.blue)
+                        .font(.bold(15))
                 }
-                .padding(.bottom, 70)
+                .padding(.top, 14)
+                .padding(.horizontal, 10)
                 Button {
                     viewModel.loginAction()
                 } label: {
@@ -59,8 +40,45 @@ struct AuthorizationView: View {
                 }
                 .cornerRadius(10)
                 .frame(height: 56, alignment: .center)
+                .padding(.top, 25)
+                Spacer()
+                VStack(spacing: 0) {
+                    Text("Авторизироваться через соц. сети")
+                        .foregroundColor(.black)
+                        .font(.medium(15))
+                        .frame(alignment: .center)
+                    HStack(spacing: 15) {
+                        Image("Instagram")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                        Image("Telegram")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                        Image("Google")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                    }
+                    .padding(.top, 14)
+                    HStack {
+                        Text("Нет аккаунта?")
+                            .foregroundColor(.black)
+                            .font(.medium(15))
+                        Text("Зарегистрироваться")
+                            .foregroundColor(.blue)
+                            .font(.bold(15))
+                    }
+                    .padding(.top, 14)
+                    .padding(.horizontal, 10)
+                }
             }
-            .padding(.horizontal, 52)
+            .ignoresSafeArea(.keyboard)
+            .padding(.horizontal, 40)
         }
     }
 }
