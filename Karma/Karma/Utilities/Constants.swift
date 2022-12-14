@@ -9,6 +9,6 @@ import Foundation
 
 struct Constants {
     struct Keys {
-        static let toShowOnboarding = "kToShowOnboarding"
+        static let completedOnboarding = "kCompletedOnboarding"
     }
 }

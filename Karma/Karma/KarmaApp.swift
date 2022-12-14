@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct KarmaApp: App {
+    @State var completedOnboarding = false
     var body: some Scene {
         WindowGroup {
-            AuthorizationView(viewModel: AuthorizationViewModel())
+            ZStack {
+                AuthorizationView(viewModel: AuthorizationViewModel())
+                if completedOnboarding {
+                    OnboardingView() {
+                        completedOnboarding = false
+                        UserDefaults.standard.set(true, forKey: Constants.Keys.completedOnboarding)
+                    }
+                }
+            }
+            .onAppear {
+                completedOnboarding = !UserDefaults.standard.bool(forKey: Constants.Keys.completedOnboarding)
+            }
         }
     }
 }

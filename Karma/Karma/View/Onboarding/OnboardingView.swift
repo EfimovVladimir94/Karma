@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    var completion: (()->())?
     var body: some View {
         ZStack {
+            Color.white.ignoresSafeArea()
             VStack(spacing: 0) {
                 Image("OnboardingLogo")
                     .padding(.horizontal, 45)
                     .padding(.bottom, 20)
                     .onTapGesture {
-                        UserDefaults.standard.set(true, forKey: Constants.Keys.toShowOnboarding)
+                        completion?()
                     }
                 Text("Стать другом фонда и начать помогать благотворительным организациям очень просто!")
                     .foregroundColor(.black)
