@@ -8,20 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		BB3819DF36EB73F355CA53F3 /* Pods_Karma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62113E351B962DCB8B9B9EF2 /* Pods_Karma.framework */; };
+		E734CC682949B6FF00941E4C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734CC672949B6FF00941E4C /* Launch Screen.storyboard */; };
+		E734CC7B2949BA4900941E4C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC7A2949BA4900941E4C /* OnboardingView.swift */; };
+		E734CC812949BAAF00941E4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC802949BAAF00941E4C /* Constants.swift */; };
+		E734CC872949BAF600941E4C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC832949BAF500941E4C /* Font.swift */; };
+		E734CC882949BAF600941E4C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC842949BAF500941E4C /* NetworkError.swift */; };
+		E734CC892949BAF600941E4C /* BaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC852949BAF600941E4C /* BaseWorker.swift */; };
+		E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC862949BAF600941E4C /* View+placeholder.swift */; };
+		E734CC962949BB5000941E4C /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E734CC922949BB4F00941E4C /* Montserrat-Light.ttf */; };
+		E734CC972949BB5000941E4C /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E734CC932949BB4F00941E4C /* Montserrat-Medium.ttf */; };
+		E734CC982949BB5000941E4C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E734CC942949BB4F00941E4C /* Montserrat-Regular.ttf */; };
+		E734CC992949BB5000941E4C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E734CC952949BB5000941E4C /* Montserrat-Bold.ttf */; };
 		E74779A02948C0CB0068E4AB /* KarmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747799F2948C0CB0068E4AB /* KarmaApp.swift */; };
-		E74779A22948C0CB0068E4AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74779A12948C0CB0068E4AB /* ContentView.swift */; };
 		E74779A42948C0CD0068E4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E74779A32948C0CD0068E4AB /* Assets.xcassets */; };
 		E74779A72948C0CD0068E4AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E74779A62948C0CD0068E4AB /* Preview Assets.xcassets */; };
+		E74D8DD02949BC5000B1E949 /* ServiceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DCF2949BC5000B1E949 /* ServiceHelpers.swift */; };
+		E74D8DD32949BC7C00B1E949 /* AuthorizationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DD22949BC7C00B1E949 /* AuthorizationWorker.swift */; };
+		E74D8DD42949BC9500B1E949 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC6E2949B94F00941E4C /* Authorization.swift */; };
+		E74D8DD92949C14B00B1E949 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DD62949C14B00B1E949 /* AuthorizationViewModel.swift */; };
+		E74D8DDA2949C14B00B1E949 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DD72949C14B00B1E949 /* AuthorizationView.swift */; };
+		E74D8DDB2949C14B00B1E949 /* AuthorizationView+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DD82949C14B00B1E949 /* AuthorizationView+LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2907D65538BD7FDBF3B2D1B7 /* Pods-Karma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karma.debug.xcconfig"; path = "Target Support Files/Pods-Karma/Pods-Karma.debug.xcconfig"; sourceTree = "<group>"; };
 		62113E351B962DCB8B9B9EF2 /* Pods_Karma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Karma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E734CC672949B6FF00941E4C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		E734CC6B2949B86400941E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E734CC6E2949B94F00941E4C /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		E734CC7A2949BA4900941E4C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E734CC802949BAAF00941E4C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E734CC832949BAF500941E4C /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		E734CC842949BAF500941E4C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E734CC852949BAF600941E4C /* BaseWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWorker.swift; sourceTree = "<group>"; };
+		E734CC862949BAF600941E4C /* View+placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+placeholder.swift"; sourceTree = "<group>"; };
+		E734CC922949BB4F00941E4C /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		E734CC932949BB4F00941E4C /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		E734CC942949BB4F00941E4C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		E734CC952949BB5000941E4C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		E747799C2948C0CB0068E4AB /* Karma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E747799F2948C0CB0068E4AB /* KarmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KarmaApp.swift; sourceTree = "<group>"; };
-		E74779A12948C0CB0068E4AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E74779A32948C0CD0068E4AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E74779A62948C0CD0068E4AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E74D8DCF2949BC5000B1E949 /* ServiceHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelpers.swift; sourceTree = "<group>"; };
+		E74D8DD22949BC7C00B1E949 /* AuthorizationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationWorker.swift; sourceTree = "<group>"; };
+		E74D8DD62949C14B00B1E949 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		E74D8DD72949C14B00B1E949 /* AuthorizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		E74D8DD82949C14B00B1E949 /* AuthorizationView+LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthorizationView+LoginView.swift"; sourceTree = "<group>"; };
 		F07637148FD7DA3854C18C75 /* Pods-Karma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karma.release.xcconfig"; path = "Target Support Files/Pods-Karma/Pods-Karma.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +87,89 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E734CC6C2949B94F00941E4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E734CC6D2949B94F00941E4C /* Entity */,
+				E734CC6F2949B94F00941E4C /* Service */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E734CC6D2949B94F00941E4C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E734CC6E2949B94F00941E4C /* Authorization.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E734CC6F2949B94F00941E4C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E74D8DCF2949BC5000B1E949 /* ServiceHelpers.swift */,
+				E74D8DD22949BC7C00B1E949 /* AuthorizationWorker.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E734CC772949BA0B00941E4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E74D8DD52949C13900B1E949 /* Authorization */,
+				E734CC7E2949BA7700941E4C /* Onboarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E734CC7E2949BA7700941E4C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E734CC7A2949BA4900941E4C /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E734CC7F2949BA9A00941E4C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E734CC8B2949BB1D00941E4C /* Font */,
+				E734CC822949BAE800941E4C /* Extensions */,
+				E734CC802949BAAF00941E4C /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E734CC822949BAE800941E4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E734CC852949BAF600941E4C /* BaseWorker.swift */,
+				E734CC832949BAF500941E4C /* Font.swift */,
+				E734CC842949BAF500941E4C /* NetworkError.swift */,
+				E734CC862949BAF600941E4C /* View+placeholder.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E734CC8B2949BB1D00941E4C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E734CC912949BB3C00941E4C /* Montserrat */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		E734CC912949BB3C00941E4C /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				E734CC952949BB5000941E4C /* Montserrat-Bold.ttf */,
+				E734CC922949BB4F00941E4C /* Montserrat-Light.ttf */,
+				E734CC932949BB4F00941E4C /* Montserrat-Medium.ttf */,
+				E734CC942949BB4F00941E4C /* Montserrat-Regular.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
 		E74779932948C0CB0068E4AB = {
 			isa = PBXGroup;
 			children = (
@@ -75,9 +191,13 @@
 		E747799E2948C0CB0068E4AB /* Karma */ = {
 			isa = PBXGroup;
 			children = (
+				E734CC7F2949BA9A00941E4C /* Utilities */,
+				E734CC6C2949B94F00941E4C /* Model */,
+				E734CC772949BA0B00941E4C /* View */,
 				E747799F2948C0CB0068E4AB /* KarmaApp.swift */,
-				E74779A12948C0CB0068E4AB /* ContentView.swift */,
+				E734CC6B2949B86400941E4C /* Info.plist */,
 				E74779A32948C0CD0068E4AB /* Assets.xcassets */,
+				E734CC672949B6FF00941E4C /* Launch Screen.storyboard */,
 				E74779A52948C0CD0068E4AB /* Preview Content */,
 			);
 			path = Karma;
@@ -89,6 +209,16 @@
 				E74779A62948C0CD0068E4AB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E74D8DD52949C13900B1E949 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				E74D8DD72949C14B00B1E949 /* AuthorizationView.swift */,
+				E74D8DD82949C14B00B1E949 /* AuthorizationView+LoginView.swift */,
+				E74D8DD62949C14B00B1E949 /* AuthorizationViewModel.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +281,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E734CC982949BB5000941E4C /* Montserrat-Regular.ttf in Resources */,
+				E734CC962949BB5000941E4C /* Montserrat-Light.ttf in Resources */,
+				E734CC972949BB5000941E4C /* Montserrat-Medium.ttf in Resources */,
+				E734CC682949B6FF00941E4C /* Launch Screen.storyboard in Resources */,
 				E74779A72948C0CD0068E4AB /* Preview Assets.xcassets in Resources */,
 				E74779A42948C0CD0068E4AB /* Assets.xcassets in Resources */,
+				E734CC992949BB5000941E4C /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,8 +340,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74779A22948C0CB0068E4AB /* ContentView.swift in Sources */,
+				E734CC7B2949BA4900941E4C /* OnboardingView.swift in Sources */,
+				E734CC892949BAF600941E4C /* BaseWorker.swift in Sources */,
+				E74D8DDA2949C14B00B1E949 /* AuthorizationView.swift in Sources */,
+				E74D8DDB2949C14B00B1E949 /* AuthorizationView+LoginView.swift in Sources */,
+				E74D8DD02949BC5000B1E949 /* ServiceHelpers.swift in Sources */,
+				E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */,
+				E74D8DD42949BC9500B1E949 /* Authorization.swift in Sources */,
+				E734CC872949BAF600941E4C /* Font.swift in Sources */,
+				E734CC882949BAF600941E4C /* NetworkError.swift in Sources */,
 				E74779A02948C0CB0068E4AB /* KarmaApp.swift in Sources */,
+				E734CC812949BAAF00941E4C /* Constants.swift in Sources */,
+				E74D8DD32949BC7C00B1E949 /* AuthorizationWorker.swift in Sources */,
+				E74D8DD92949C14B00B1E949 /* AuthorizationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +485,11 @@
 				DEVELOPMENT_TEAM = U8RYS8TVG9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Karma/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -369,9 +517,11 @@
 				DEVELOPMENT_TEAM = U8RYS8TVG9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Karma/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

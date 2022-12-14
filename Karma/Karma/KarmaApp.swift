@@ -11,7 +11,7 @@ import SwiftUI
 struct KarmaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AuthorizationView(viewModel: AuthorizationViewModel())
         }
     }
 }
