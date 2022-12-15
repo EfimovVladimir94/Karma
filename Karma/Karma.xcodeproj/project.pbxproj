@@ -28,6 +28,9 @@
 		E74D8DD92949C14B00B1E949 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DD62949C14B00B1E949 /* AuthorizationViewModel.swift */; };
 		E74D8DDA2949C14B00B1E949 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DD72949C14B00B1E949 /* AuthorizationView.swift */; };
 		E74D8DDB2949C14B00B1E949 /* AuthorizationView+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DD82949C14B00B1E949 /* AuthorizationView+LoginView.swift */; };
+		E74D8DDF294AFBFC00B1E949 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DDD294AFBFC00B1E949 /* RegistrationViewModel.swift */; };
+		E74D8DE0294AFBFC00B1E949 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DDE294AFBFC00B1E949 /* RegistrationView.swift */; };
+		E74D8DE2294AFC7500B1E949 /* AuthorizationView+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DE1294AFC7500B1E949 /* AuthorizationView+Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		E74D8DD62949C14B00B1E949 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
 		E74D8DD72949C14B00B1E949 /* AuthorizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		E74D8DD82949C14B00B1E949 /* AuthorizationView+LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthorizationView+LoginView.swift"; sourceTree = "<group>"; };
+		E74D8DDD294AFBFC00B1E949 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		E74D8DDE294AFBFC00B1E949 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		E74D8DE1294AFC7500B1E949 /* AuthorizationView+Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthorizationView+Content.swift"; sourceTree = "<group>"; };
 		F07637148FD7DA3854C18C75 /* Pods-Karma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karma.release.xcconfig"; path = "Target Support Files/Pods-Karma/Pods-Karma.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +122,7 @@
 		E734CC772949BA0B00941E4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E74D8DDC294AFBD600B1E949 /* Registration */,
 				E74D8DD52949C13900B1E949 /* Authorization */,
 				E734CC7E2949BA7700941E4C /* Onboarding */,
 			);
@@ -215,10 +222,20 @@
 			isa = PBXGroup;
 			children = (
 				E74D8DD72949C14B00B1E949 /* AuthorizationView.swift */,
+				E74D8DE1294AFC7500B1E949 /* AuthorizationView+Content.swift */,
 				E74D8DD82949C14B00B1E949 /* AuthorizationView+LoginView.swift */,
 				E74D8DD62949C14B00B1E949 /* AuthorizationViewModel.swift */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		E74D8DDC294AFBD600B1E949 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E74D8DDE294AFBFC00B1E949 /* RegistrationView.swift */,
+				E74D8DDD294AFBFC00B1E949 /* RegistrationViewModel.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,13 +360,16 @@
 				E734CC7B2949BA4900941E4C /* OnboardingView.swift in Sources */,
 				E734CC892949BAF600941E4C /* BaseWorker.swift in Sources */,
 				E74D8DDA2949C14B00B1E949 /* AuthorizationView.swift in Sources */,
+				E74D8DDF294AFBFC00B1E949 /* RegistrationViewModel.swift in Sources */,
 				E74D8DDB2949C14B00B1E949 /* AuthorizationView+LoginView.swift in Sources */,
 				E74D8DD02949BC5000B1E949 /* ServiceHelpers.swift in Sources */,
 				E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */,
 				E74D8DD42949BC9500B1E949 /* Authorization.swift in Sources */,
 				E734CC872949BAF600941E4C /* Font.swift in Sources */,
+				E74D8DE0294AFBFC00B1E949 /* RegistrationView.swift in Sources */,
 				E734CC882949BAF600941E4C /* NetworkError.swift in Sources */,
 				E74779A02948C0CB0068E4AB /* KarmaApp.swift in Sources */,
+				E74D8DE2294AFC7500B1E949 /* AuthorizationView+Content.swift in Sources */,
 				E734CC812949BAAF00941E4C /* Constants.swift in Sources */,
 				E74D8DD32949BC7C00B1E949 /* AuthorizationWorker.swift in Sources */,
 				E74D8DD92949C14B00B1E949 /* AuthorizationViewModel.swift in Sources */,

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 public struct Authorization: Codable {
     public let accessToken: String
