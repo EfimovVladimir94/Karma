@@ -16,6 +16,9 @@ struct AuthorizationView: View {
             .fullScreenCover(isPresented: $showRegistration) {
                 RegistrationView(viewModel: RegistrationViewModel())
             }
+            .fullScreenCover(isPresented: $viewModel.showMainPage) {
+                MainPageView()
+            }
     }
 }
 

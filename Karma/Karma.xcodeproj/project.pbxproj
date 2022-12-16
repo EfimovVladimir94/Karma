@@ -31,6 +31,11 @@
 		E74D8DDF294AFBFC00B1E949 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DDD294AFBFC00B1E949 /* RegistrationViewModel.swift */; };
 		E74D8DE0294AFBFC00B1E949 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DDE294AFBFC00B1E949 /* RegistrationView.swift */; };
 		E74D8DE2294AFC7500B1E949 /* AuthorizationView+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DE1294AFC7500B1E949 /* AuthorizationView+Content.swift */; };
+		E74D8DE5294C526200B1E949 /* CstTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DE4294C513800B1E949 /* CstTextField.swift */; };
+		E74D8DE8294C529200B1E949 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DE7294C529200B1E949 /* MainPageView.swift */; };
+		E74D8DED294C52A400B1E949 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEA294C52A400B1E949 /* MainViewModel.swift */; };
+		E74D8DEE294C52A400B1E949 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEB294C52A400B1E949 /* MainView.swift */; };
+		E74D8DEF294C52A400B1E949 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEC294C52A400B1E949 /* MainViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +66,11 @@
 		E74D8DDD294AFBFC00B1E949 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		E74D8DDE294AFBFC00B1E949 /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E74D8DE1294AFC7500B1E949 /* AuthorizationView+Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthorizationView+Content.swift"; sourceTree = "<group>"; };
+		E74D8DE4294C513800B1E949 /* CstTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CstTextField.swift; sourceTree = "<group>"; };
+		E74D8DE7294C529200B1E949 /* MainPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		E74D8DEA294C52A400B1E949 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E74D8DEB294C52A400B1E949 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E74D8DEC294C52A400B1E949 /* MainViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		F07637148FD7DA3854C18C75 /* Pods-Karma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karma.release.xcconfig"; path = "Target Support Files/Pods-Karma/Pods-Karma.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +132,7 @@
 		E734CC772949BA0B00941E4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E74D8DE6294C528100B1E949 /* MainPage */,
 				E74D8DDC294AFBD600B1E949 /* Registration */,
 				E74D8DD52949C13900B1E949 /* Authorization */,
 				E734CC7E2949BA7700941E4C /* Onboarding */,
@@ -198,6 +209,7 @@
 		E747799E2948C0CB0068E4AB /* Karma */ = {
 			isa = PBXGroup;
 			children = (
+				E74D8DE3294C512A00B1E949 /* Custom */,
 				E734CC7F2949BA9A00941E4C /* Utilities */,
 				E734CC6C2949B94F00941E4C /* Model */,
 				E734CC772949BA0B00941E4C /* View */,
@@ -236,6 +248,33 @@
 				E74D8DDD294AFBFC00B1E949 /* RegistrationViewModel.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		E74D8DE3294C512A00B1E949 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E74D8DE4294C513800B1E949 /* CstTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		E74D8DE6294C528100B1E949 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				E74D8DE9294C529500B1E949 /* MainView */,
+				E74D8DE7294C529200B1E949 /* MainPageView.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		E74D8DE9294C529500B1E949 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				E74D8DEB294C52A400B1E949 /* MainView.swift */,
+				E74D8DEC294C52A400B1E949 /* MainViewCell.swift */,
+				E74D8DEA294C52A400B1E949 /* MainViewModel.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,9 +404,14 @@
 				E74D8DD02949BC5000B1E949 /* ServiceHelpers.swift in Sources */,
 				E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */,
 				E74D8DD42949BC9500B1E949 /* Authorization.swift in Sources */,
+				E74D8DE8294C529200B1E949 /* MainPageView.swift in Sources */,
+				E74D8DE5294C526200B1E949 /* CstTextField.swift in Sources */,
 				E734CC872949BAF600941E4C /* Font.swift in Sources */,
 				E74D8DE0294AFBFC00B1E949 /* RegistrationView.swift in Sources */,
+				E74D8DEF294C52A400B1E949 /* MainViewCell.swift in Sources */,
 				E734CC882949BAF600941E4C /* NetworkError.swift in Sources */,
+				E74D8DEE294C52A400B1E949 /* MainView.swift in Sources */,
+				E74D8DED294C52A400B1E949 /* MainViewModel.swift in Sources */,
 				E74779A02948C0CB0068E4AB /* KarmaApp.swift in Sources */,
 				E74D8DE2294AFC7500B1E949 /* AuthorizationView+Content.swift in Sources */,
 				E734CC812949BAAF00941E4C /* Constants.swift in Sources */,
