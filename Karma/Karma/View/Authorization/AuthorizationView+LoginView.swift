@@ -9,12 +9,17 @@ import SwiftUI
 
 extension AuthorizationView {
     var loginPassView: some View {
-        VStack(spacing: 14)  {
+        VStack(alignment: .leading, spacing: 14)  {
             CstTextField(
                 text: $viewModel.username,
                 imageName: "Login",
                 placeholder: "Логин"
             )
+            if let error = viewModel.loginError {
+                Text(error)
+                    .foregroundColor(.red)
+                    .font(.regular(10))
+            }
             HStack {
                 HStack(spacing: 11) {
                     Image("Password")
@@ -39,6 +44,11 @@ extension AuthorizationView {
                         x: 0,
                         y: 0
                     ))
+            }
+            if let error = viewModel.passwordError {
+                Text(error)
+                    .foregroundColor(.red)
+                    .font(.regular(10))
             }
         }
     }

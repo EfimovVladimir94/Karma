@@ -188,7 +188,7 @@ extension NetworkError: LocalizedError {
     public var errorDescription: String? {
         switch type {
         case .badRequest: return description ?? "Некорректный запрос"
-        case .unauthorized: return description ?? "Ваша сессия устарела"
+        case .unauthorized: return description ?? "Неверный логин или пароль"
         case .paymentRequired: return description ?? "Необходима оплата"
         case .forbidden: return description ?? "Нет прав"
         case .notFound: return description ?? "Не найдено"
