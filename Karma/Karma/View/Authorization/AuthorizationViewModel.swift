@@ -15,6 +15,7 @@ class AuthorizationViewModel: ObservableObject {
     @Published var loginError: String?
     @Published var passwordError: String?
     private let authWorker = AuthorizationWorker()
+    private let keychainManager = KeychainManager()
     
     enum AuthorizationError {
         case loginEmpty, passwordEmpty, incorrectCredentials
@@ -40,10 +41,10 @@ class AuthorizationViewModel: ObservableObject {
         authWorker.authorization(withLogin: username, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success:
+                case .success(let auth):
                     self?.showMainPage = true
+                    self?.keychainManager.set(auth.accessToken, forKey: Constants.Keys.token)
                     break
-                    
                 case .failure(let error):
                     let errorTitle = AuthorizationError.incorrectCredentials.title
                     withAnimation {

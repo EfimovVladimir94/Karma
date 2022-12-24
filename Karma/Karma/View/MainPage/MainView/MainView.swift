@@ -35,16 +35,20 @@ struct MainView: View {
             }
             .padding(.horizontal, 54)
             ScrollView {
-                VStack(spacing: 30) {
-                    MainViewCell()
-                        .padding(.top, 10)
-                    MainViewCell()
-                    MainViewCell()
-                    MainViewCell()
+                LazyVStack(spacing: 30) {
+                    if let organizations = viewModel.organizationList?.organizations {
+                        ForEach(organizations) { items in
+                            MainViewCell(title: items.name, text: items.description)
+                        }
+                    }
                 }
                 .padding(.bottom, 50)
+                .padding(.top, 10)
             }
             Spacer()
+        }
+        .onAppear {
+            viewModel.loadData()
         }
     }
 }

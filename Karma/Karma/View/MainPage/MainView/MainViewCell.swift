@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainViewCell: View {
+    var title: String
+    var text: String
     
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -31,10 +33,10 @@ struct MainViewCell: View {
         ZStack {
             HStack {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Подари жизнь")
+                    Text(title)
                         .font(.bold(25))
                         .foregroundColor(Color.black)
-                    Text("Работает с 2011 года, лауреаты премии мира и всего всего на свете.")
+                    Text(text)
                         .font(.medium(16))
                         .foregroundColor(Color.black)
                         .multilineTextAlignment(.leading)
@@ -59,6 +61,6 @@ struct MainViewCell: View {
 
 struct MainViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainViewCell()
+        MainViewCell(title: "", text: "")
     }
 }
