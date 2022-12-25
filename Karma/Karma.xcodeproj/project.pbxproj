@@ -41,6 +41,8 @@
 		E7E14016295764C500635CCD /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14013295764C400635CCD /* KeychainConstants.swift */; };
 		E7E14017295764C500635CCD /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14014295764C500635CCD /* KeyChainManager.swift */; };
 		E7E14019295764D300635CCD /* OrganizationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14018295764D200635CCD /* OrganizationWorker.swift */; };
+		E7E1401B2958735800635CCD /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1401A2958735800635CCD /* OnboardingViewModel.swift */; };
+		E7E1401D2958741700635CCD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1401C2958741700635CCD /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		E7E14013295764C400635CCD /* KeychainConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
 		E7E14014295764C500635CCD /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		E7E14018295764D200635CCD /* OrganizationWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationWorker.swift; sourceTree = "<group>"; };
+		E7E1401A2958735800635CCD /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		E7E1401C2958741700635CCD /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F07637148FD7DA3854C18C75 /* Pods-Karma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karma.release.xcconfig"; path = "Target Support Files/Pods-Karma/Pods-Karma.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,7 @@
 		E734CC7E2949BA7700941E4C /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				E7E1401A2958735800635CCD /* OnboardingViewModel.swift */,
 				E734CC7A2949BA4900941E4C /* OnboardingView.swift */,
 			);
 			path = Onboarding;
@@ -174,6 +179,7 @@
 		E734CC822949BAE800941E4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E7E1401C2958741700635CCD /* Color.swift */,
 				E734CC852949BAF600941E4C /* BaseWorker.swift */,
 				E734CC832949BAF500941E4C /* Font.swift */,
 				E734CC842949BAF500941E4C /* NetworkError.swift */,
@@ -423,10 +429,12 @@
 				E734CC892949BAF600941E4C /* BaseWorker.swift in Sources */,
 				E7E14017295764C500635CCD /* KeyChainManager.swift in Sources */,
 				E74D8DDA2949C14B00B1E949 /* AuthorizationView.swift in Sources */,
+				E7E1401B2958735800635CCD /* OnboardingViewModel.swift in Sources */,
 				E74D8DDF294AFBFC00B1E949 /* RegistrationViewModel.swift in Sources */,
 				E7E14015295764C500635CCD /* KeychainAccessType.swift in Sources */,
 				E7E1400C29575DCE00635CCD /* Organization.swift in Sources */,
 				E74D8DDB2949C14B00B1E949 /* AuthorizationView+LoginView.swift in Sources */,
+				E7E1401D2958741700635CCD /* Color.swift in Sources */,
 				E74D8DD02949BC5000B1E949 /* ServiceHelpers.swift in Sources */,
 				E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */,
 				E74D8DD42949BC9500B1E949 /* Authorization.swift in Sources */,

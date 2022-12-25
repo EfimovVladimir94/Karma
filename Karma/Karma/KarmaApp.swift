@@ -13,12 +13,13 @@ struct KarmaApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                AuthorizationView(viewModel: AuthorizationViewModel())
                 if completedOnboarding {
-                    OnboardingView() {
+                    OnboardingView(viewModel: OnboardingViewModel()) {
                         completedOnboarding = false
                         UserDefaults.standard.set(true, forKey: Constants.Keys.completedOnboarding)
                     }
+                } else {
+                    AuthorizationView(viewModel: AuthorizationViewModel())
                 }
             }
             .onAppear {
