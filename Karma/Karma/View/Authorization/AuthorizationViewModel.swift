@@ -50,7 +50,6 @@ class AuthorizationViewModel: ObservableObject {
                     withAnimation {
                         self?.passwordError = error.localizedDescription == errorTitle ? errorTitle : nil
                     }
-                    print(error.localizedDescription)
                     // for test
                     //                self?.showMainPage = true
                     break

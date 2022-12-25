@@ -52,12 +52,12 @@ private enum OrganizationService: TargetType {
 
 protocol OrganizationWorkerProtocol: AnyObject {
     
-    func getOrganizationList(completionHandler: @escaping (Result<OrganizationList>) -> Void)
+    func getOrganizationList(completionHandler: @escaping (Result<[Organization]>) -> Void)
 }
 
 final class OrganizationWorker: BaseWorker, OrganizationWorkerProtocol {
     
-    public func getOrganizationList(completionHandler: @escaping (Result<OrganizationList>) -> Void) {
+    public func getOrganizationList(completionHandler: @escaping (Result<[Organization]>) -> Void) {
         request(OrganizationService.getOrganizationList, completionHandler: completionHandler)
     }
 }

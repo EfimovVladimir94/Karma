@@ -41,7 +41,6 @@ open class BaseWorker: BaseWorkerProtocol {
                         do {
                             let data = try decoder.decode(T.self, from: response.data)
                             completionHandler(.success(data))
-                            print("Authorization \(data)")
                         } catch let error {
                             if let string = String(data: response.data, encoding: .utf8),
                                let object = string as? T {
@@ -51,7 +50,6 @@ open class BaseWorker: BaseWorkerProtocol {
                             }
                         }
                     case .client(let error), .server(let error), .unknown(let error):
-                        print("Authorization \(error.localizedDescription)")
                         completionHandler(.failure(error))
                     }
                 case .failure(let error):

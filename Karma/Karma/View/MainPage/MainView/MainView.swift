@@ -21,6 +21,9 @@ struct MainView: View {
             }
             .padding(.horizontal, 40)
             .padding(.top, 11)
+            .onChange(of: viewModel.username) { newValue in
+                viewModel.search(by: newValue)
+            }
             
             Button {
                 //                viewModel.loginAction()
@@ -36,10 +39,8 @@ struct MainView: View {
             .padding(.horizontal, 54)
             ScrollView {
                 LazyVStack(spacing: 30) {
-                    if let organizations = viewModel.organizationList?.organizations {
-                        ForEach(organizations) { items in
-                            MainViewCell(title: items.name, text: items.description)
-                        }
+                    ForEach(viewModel.filteredList) { items in
+                        MainViewCell(title: items.name, text: items.description)
                     }
                 }
                 .padding(.bottom, 50)

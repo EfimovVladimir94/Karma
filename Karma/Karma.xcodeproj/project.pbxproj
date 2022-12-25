@@ -36,7 +36,7 @@
 		E74D8DED294C52A400B1E949 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEA294C52A400B1E949 /* MainViewModel.swift */; };
 		E74D8DEE294C52A400B1E949 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEB294C52A400B1E949 /* MainView.swift */; };
 		E74D8DEF294C52A400B1E949 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEC294C52A400B1E949 /* MainViewCell.swift */; };
-		E7E1400C29575DCE00635CCD /* OrganizationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1400B29575DCE00635CCD /* OrganizationList.swift */; };
+		E7E1400C29575DCE00635CCD /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1400B29575DCE00635CCD /* Organization.swift */; };
 		E7E14015295764C500635CCD /* KeychainAccessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14012295764C400635CCD /* KeychainAccessType.swift */; };
 		E7E14016295764C500635CCD /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14013295764C400635CCD /* KeychainConstants.swift */; };
 		E7E14017295764C500635CCD /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14014295764C500635CCD /* KeyChainManager.swift */; };
@@ -76,7 +76,7 @@
 		E74D8DEA294C52A400B1E949 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E74D8DEB294C52A400B1E949 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E74D8DEC294C52A400B1E949 /* MainViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
-		E7E1400B29575DCE00635CCD /* OrganizationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationList.swift; sourceTree = "<group>"; };
+		E7E1400B29575DCE00635CCD /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		E7E14012295764C400635CCD /* KeychainAccessType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessType.swift; sourceTree = "<group>"; };
 		E7E14013295764C400635CCD /* KeychainConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
 		E7E14014295764C500635CCD /* KeyChainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		E734CC6D2949B94F00941E4C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				E7E1400B29575DCE00635CCD /* OrganizationList.swift */,
+				E7E1400B29575DCE00635CCD /* Organization.swift */,
 				E734CC6E2949B94F00941E4C /* Authorization.swift */,
 			);
 			path = Entity;
@@ -425,7 +425,7 @@
 				E74D8DDA2949C14B00B1E949 /* AuthorizationView.swift in Sources */,
 				E74D8DDF294AFBFC00B1E949 /* RegistrationViewModel.swift in Sources */,
 				E7E14015295764C500635CCD /* KeychainAccessType.swift in Sources */,
-				E7E1400C29575DCE00635CCD /* OrganizationList.swift in Sources */,
+				E7E1400C29575DCE00635CCD /* Organization.swift in Sources */,
 				E74D8DDB2949C14B00B1E949 /* AuthorizationView+LoginView.swift in Sources */,
 				E74D8DD02949BC5000B1E949 /* ServiceHelpers.swift in Sources */,
 				E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */,

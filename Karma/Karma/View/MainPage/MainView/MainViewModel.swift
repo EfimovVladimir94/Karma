@@ -9,7 +9,8 @@ import SwiftUI
 
 class MainViewModel: ObservableObject {
     @Published var username: String = ""
-    @Published var organizationList: OrganizationList?
+    @Published var defaultList: [Organization] = []
+    @Published var filteredList: [Organization] = []
     private let authWorker = OrganizationWorker()
     
     func loadData() {
@@ -17,22 +18,32 @@ class MainViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let list):
-                    self?.organizationList = list
-                case .failure(let error):
-                    print("getOrganizationList: \(error.localizedDescription)")
+                    self?.defaultList = list
+                    self?.filteredList = list
+                case .failure(_):
                     // For Test
-                    self?.organizationList = OrganizationList(organizations: [
+                    self?.defaultList = [
                         .init(
                             id: 0, name: "Подари жизнь",
                             description: "Работает с 2011 года, лауреаты премии мира и всего всего на свете."),
                         .init(
-                            id: 1, name: "Подари жизнь2",
+                            id: 1, name: "Тест",
                             description: "Работает с 2021 года, лауреаты премии мира и всего всего на свете.")
-                    ])
+                    ]
                     break
                 }
             }
         }
-        
+    }
+    
+    func search(by name: String) {
+        guard name.isEmpty else {
+            filteredList = defaultList
+                .filter { org in
+                    org.name.lowercased().contains(name.lowercased())
+                }
+            return
+        }
+        filteredList = defaultList
     }
 }
