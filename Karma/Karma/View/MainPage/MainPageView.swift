@@ -12,26 +12,28 @@ struct MainPageView: View {
     @State var index = 0
     
     var body: some View {
-        VStack {
-            Spacer()
-            switch index {
-            case 0 :
-                MainView(viewModel: MainViewModel())
-                    .padding(.bottom, -50)
-            case 1 :
-                ZStack {Color.blue.padding(.bottom, -50)}
-            case 2 :
-                ZStack {Color.green.padding(.bottom, -50)}
-            case 3 :
-                ZStack {Color.black.padding(.bottom, -50)}
-            default:
-                ZStack {Color.red.padding(.bottom, -50)}
+        ZStack {
+            VStack {
+                Spacer()
+                switch index {
+                case 0 :
+                    MainView(viewModel: MainViewModel())
+                case 1 :
+                    ProfileView()
+                case 2 :
+                    ZStack {Color.green}
+                case 3 :
+                    ZStack {Color.black}
+                default:
+                    ZStack {Color.red}
+                }
             }
-            Spacer()
-            barButtonView
+            VStack {
+                Spacer()
+                barButtonView
+            }
+            .ignoresSafeArea()
         }
-        .padding(.top, 40)
-        .ignoresSafeArea()
     }
     
     var barButtonView: some View {

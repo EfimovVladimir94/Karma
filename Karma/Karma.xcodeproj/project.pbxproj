@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BB3819DF36EB73F355CA53F3 /* Pods_Karma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62113E351B962DCB8B9B9EF2 /* Pods_Karma.framework */; };
+		E722D9422962ED4A00649324 /* WidgetDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D9412962ED4A00649324 /* WidgetDataSource.swift */; };
+		E722D9482962EE5300649324 /* WidgetPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D9442962EE5200649324 /* WidgetPointsView.swift */; };
+		E722D9492962EE5300649324 /* WidgetFactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D9452962EE5200649324 /* WidgetFactoryView.swift */; };
+		E722D94A2962EE5300649324 /* WidgetAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D9462962EE5300649324 /* WidgetAchievementView.swift */; };
+		E722D94B2962EE5300649324 /* WidgetHelpedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D9472962EE5300649324 /* WidgetHelpedView.swift */; };
+		E722D94F2962EE8400649324 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D94D2962EE8400649324 /* ProfileView.swift */; };
+		E722D9502962EE8400649324 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D94E2962EE8400649324 /* AchievementsView.swift */; };
+		E722D9542962EE9A00649324 /* CredentialViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D9522962EE9A00649324 /* CredentialViewCell.swift */; };
+		E722D9552962EE9A00649324 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722D9532962EE9A00649324 /* SettingsView.swift */; };
 		E734CC682949B6FF00941E4C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E734CC672949B6FF00941E4C /* Launch Screen.storyboard */; };
 		E734CC7B2949BA4900941E4C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC7A2949BA4900941E4C /* OnboardingView.swift */; };
 		E734CC812949BAAF00941E4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734CC802949BAAF00941E4C /* Constants.swift */; };
@@ -48,6 +57,15 @@
 /* Begin PBXFileReference section */
 		2907D65538BD7FDBF3B2D1B7 /* Pods-Karma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karma.debug.xcconfig"; path = "Target Support Files/Pods-Karma/Pods-Karma.debug.xcconfig"; sourceTree = "<group>"; };
 		62113E351B962DCB8B9B9EF2 /* Pods_Karma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Karma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E722D9412962ED4A00649324 /* WidgetDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetDataSource.swift; sourceTree = "<group>"; };
+		E722D9442962EE5200649324 /* WidgetPointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetPointsView.swift; sourceTree = "<group>"; };
+		E722D9452962EE5200649324 /* WidgetFactoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetFactoryView.swift; sourceTree = "<group>"; };
+		E722D9462962EE5300649324 /* WidgetAchievementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetAchievementView.swift; sourceTree = "<group>"; };
+		E722D9472962EE5300649324 /* WidgetHelpedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetHelpedView.swift; sourceTree = "<group>"; };
+		E722D94D2962EE8400649324 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E722D94E2962EE8400649324 /* AchievementsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		E722D9522962EE9A00649324 /* CredentialViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialViewCell.swift; sourceTree = "<group>"; };
+		E722D9532962EE9A00649324 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E734CC672949B6FF00941E4C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E734CC6B2949B86400941E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E734CC6E2949B94F00941E4C /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
@@ -117,6 +135,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E722D9432962EE3800649324 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				E722D9462962EE5300649324 /* WidgetAchievementView.swift */,
+				E722D9452962EE5200649324 /* WidgetFactoryView.swift */,
+				E722D9472962EE5300649324 /* WidgetHelpedView.swift */,
+				E722D9442962EE5200649324 /* WidgetPointsView.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		E722D94C2962EE7200649324 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				E722D9512962EE8E00649324 /* Settings */,
+				E722D94E2962EE8400649324 /* AchievementsView.swift */,
+				E722D94D2962EE8400649324 /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		E722D9512962EE8E00649324 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E722D9522962EE9A00649324 /* CredentialViewCell.swift */,
+				E722D9532962EE9A00649324 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		E734CC6C2949B94F00941E4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E7E1400B29575DCE00635CCD /* Organization.swift */,
+				E722D9412962ED4A00649324 /* WidgetDataSource.swift */,
 				E734CC6E2949B94F00941E4C /* Authorization.swift */,
 			);
 			path = Entity;
@@ -280,6 +329,8 @@
 		E74D8DE6294C528100B1E949 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				E722D94C2962EE7200649324 /* ProfileView */,
+				E722D9432962EE3800649324 /* Widgets */,
 				E74D8DE9294C529500B1E949 /* MainView */,
 				E74D8DE7294C529200B1E949 /* MainPageView.swift */,
 			);
@@ -425,11 +476,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E722D9422962ED4A00649324 /* WidgetDataSource.swift in Sources */,
 				E734CC7B2949BA4900941E4C /* OnboardingView.swift in Sources */,
+				E722D9502962EE8400649324 /* AchievementsView.swift in Sources */,
 				E734CC892949BAF600941E4C /* BaseWorker.swift in Sources */,
 				E7E14017295764C500635CCD /* KeyChainManager.swift in Sources */,
 				E74D8DDA2949C14B00B1E949 /* AuthorizationView.swift in Sources */,
+				E722D9552962EE9A00649324 /* SettingsView.swift in Sources */,
 				E7E1401B2958735800635CCD /* OnboardingViewModel.swift in Sources */,
+				E722D9492962EE5300649324 /* WidgetFactoryView.swift in Sources */,
 				E74D8DDF294AFBFC00B1E949 /* RegistrationViewModel.swift in Sources */,
 				E7E14015295764C500635CCD /* KeychainAccessType.swift in Sources */,
 				E7E1400C29575DCE00635CCD /* Organization.swift in Sources */,
@@ -439,19 +494,24 @@
 				E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */,
 				E74D8DD42949BC9500B1E949 /* Authorization.swift in Sources */,
 				E74D8DE8294C529200B1E949 /* MainPageView.swift in Sources */,
+				E722D9482962EE5300649324 /* WidgetPointsView.swift in Sources */,
 				E7E14019295764D300635CCD /* OrganizationWorker.swift in Sources */,
 				E7E14016295764C500635CCD /* KeychainConstants.swift in Sources */,
 				E74D8DE5294C526200B1E949 /* CstTextField.swift in Sources */,
+				E722D9542962EE9A00649324 /* CredentialViewCell.swift in Sources */,
 				E734CC872949BAF600941E4C /* Font.swift in Sources */,
+				E722D94B2962EE5300649324 /* WidgetHelpedView.swift in Sources */,
 				E74D8DE0294AFBFC00B1E949 /* RegistrationView.swift in Sources */,
 				E74D8DEF294C52A400B1E949 /* MainViewCell.swift in Sources */,
 				E734CC882949BAF600941E4C /* NetworkError.swift in Sources */,
 				E74D8DEE294C52A400B1E949 /* MainView.swift in Sources */,
+				E722D94F2962EE8400649324 /* ProfileView.swift in Sources */,
 				E74D8DED294C52A400B1E949 /* MainViewModel.swift in Sources */,
 				E74779A02948C0CB0068E4AB /* KarmaApp.swift in Sources */,
 				E74D8DE2294AFC7500B1E949 /* AuthorizationView+Content.swift in Sources */,
 				E734CC812949BAAF00941E4C /* Constants.swift in Sources */,
 				E74D8DD32949BC7C00B1E949 /* AuthorizationWorker.swift in Sources */,
+				E722D94A2962EE5300649324 /* WidgetAchievementView.swift in Sources */,
 				E74D8DD92949C14B00B1E949 /* AuthorizationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
