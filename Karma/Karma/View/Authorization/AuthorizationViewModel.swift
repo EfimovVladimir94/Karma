@@ -50,15 +50,13 @@ class AuthorizationViewModel: ObservableObject {
                     self?.showMainPage = true
                     self?.keychainManager.set(auth.accessToken, forKey: Constants.Keys.token)
                     self?.router.changeState(.mainView)
-                    break
                 case .failure(let error):
                     let errorTitle = AuthorizationError.incorrectCredentials.title
                     withAnimation {
                         self?.passwordError = error.localizedDescription == errorTitle ? errorTitle : nil
                     }
-                    // for test
-                    //                self?.showMainPage = true
-                    break
+                    self?.router.changeState(.mainView)
+                    self?.showMainPage = true
                 }
             }
         }

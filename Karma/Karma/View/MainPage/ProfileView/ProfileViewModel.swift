@@ -12,7 +12,6 @@ class ProfileViewModel: ObservableObject {
     public let router: NavigationView
     private let settingsWorker = SettingsProfileWorker()
     private let keychainManager = KeychainManager()
-    @Published var showAuthorization: Bool = false
     
     init(router: NavigationView) {
         self.router = router
@@ -24,11 +23,10 @@ class ProfileViewModel: ObservableObject {
                 switch result {
                 case .success(let list):
                     self?.keychainManager.set("", forKey: Constants.Keys.token)
-                    self?.showAuthorization = true
                     self?.router.changeState(.authorization)
                     break
                 case .failure(_):
-                    break
+                    self?.router.changeState(.authorization)
                 }
             }
         }

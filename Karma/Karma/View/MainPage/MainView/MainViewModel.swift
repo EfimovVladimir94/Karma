@@ -22,7 +22,7 @@ class MainViewModel: ObservableObject {
                     self?.filteredList = list
                 case .failure(_):
                     // For Test
-                    self?.defaultList = [
+                    let list: [Organization] = [
                         .init(
                             id: 0, name: "Подари жизнь",
                             description: "Работает с 2011 года, лауреаты премии мира и всего всего на свете."),
@@ -30,7 +30,8 @@ class MainViewModel: ObservableObject {
                             id: 1, name: "Тест",
                             description: "Работает с 2021 года, лауреаты премии мира и всего всего на свете.")
                     ]
-                    break
+                    self?.defaultList = list
+                    self?.filteredList = list
                 }
             }
         }
