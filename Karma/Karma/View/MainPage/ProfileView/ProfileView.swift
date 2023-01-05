@@ -9,20 +9,21 @@ import SwiftUI
 
 struct ProfileView: View {
     @State var showSettings = false
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 25) {
                 header
-                    .sheet(isPresented: $showSettings) {
-                        SettingsView()
-                    }
                 WidgetFactoryView(datasource: .init(amountLbl: "154", type: .points))
                 WidgetFactoryView(datasource: .init(amountLbl: "154", type: .helped))
                 WidgetFactoryView(datasource: .init(amountLbl: "154", type: .achievements))
             }
             .padding(.horizontal, 12)
             .padding(.bottom, 100)
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsView(viewModel: viewModel)
         }
     }
     
@@ -49,6 +50,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(viewModel: .init(router: .init(withState: .mainView)))
     }
 }

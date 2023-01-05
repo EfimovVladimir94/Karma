@@ -9,7 +9,12 @@ import SwiftUI
 
 struct MainPageView: View {
     
+    public let router: NavigationView
     @State var index = 0
+    
+    init(router: NavigationView) {
+        self.router = router
+    }
     
     var body: some View {
         ZStack {
@@ -19,7 +24,7 @@ struct MainPageView: View {
                 case 0 :
                     MainView(viewModel: MainViewModel())
                 case 1 :
-                    ProfileView()
+                    ProfileView(viewModel: .init(router: router))
                 case 2 :
                     ZStack {Color.green}
                 case 3 :
@@ -132,6 +137,6 @@ struct MainPageView: View {
 
 struct MainPageView_Previews: PreviewProvider {
     static var previews: some View {
-        MainPageView()
+        MainPageView(router: .init(withState: .mainView))
     }
 }

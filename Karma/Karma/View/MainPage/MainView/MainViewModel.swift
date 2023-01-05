@@ -11,10 +11,10 @@ class MainViewModel: ObservableObject {
     @Published var username: String = ""
     @Published var defaultList: [Organization] = []
     @Published var filteredList: [Organization] = []
-    private let authWorker = OrganizationWorker()
+    private let orgWorker = OrganizationWorker()
     
     func loadData() {
-        authWorker.getOrganizationList() { [weak self] result in
+        orgWorker.getOrganizationList() { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let list):

@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @State var enablePush = false
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         VStack(spacing: 0) {
@@ -39,7 +40,8 @@ struct SettingsView: View {
                 .padding(.top, 50)
             
             Button {
-                //                viewModel.loginAction()
+                viewModel.logOut()
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 ZStack {
                     Color.blue
@@ -80,6 +82,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(viewModel: .init(router: .init(withState: .mainView)))
     }
 }

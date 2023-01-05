@@ -17,13 +17,13 @@ struct AuthorizationView: View {
                 RegistrationView(viewModel: RegistrationViewModel())
             }
             .fullScreenCover(isPresented: $viewModel.showMainPage) {
-                MainPageView()
+                MainPageView(router: viewModel.router)
             }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthorizationView(viewModel: AuthorizationViewModel())
+        AuthorizationView(viewModel: AuthorizationViewModel(router: NavigationView.init(withState: .authorization)))
     }
 }

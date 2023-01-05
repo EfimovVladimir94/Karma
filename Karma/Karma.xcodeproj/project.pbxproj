@@ -45,6 +45,9 @@
 		E74D8DED294C52A400B1E949 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEA294C52A400B1E949 /* MainViewModel.swift */; };
 		E74D8DEE294C52A400B1E949 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEB294C52A400B1E949 /* MainView.swift */; };
 		E74D8DEF294C52A400B1E949 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEC294C52A400B1E949 /* MainViewCell.swift */; };
+		E7A313BD29669436003A4C37 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313BC29669436003A4C37 /* ProfileViewModel.swift */; };
+		E7A313BF29669481003A4C37 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313BE29669481003A4C37 /* NavigationView.swift */; };
+		E7A313C12966954F003A4C37 /* SettingsProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313C02966954F003A4C37 /* SettingsProfileWorker.swift */; };
 		E7E1400C29575DCE00635CCD /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1400B29575DCE00635CCD /* Organization.swift */; };
 		E7E14015295764C500635CCD /* KeychainAccessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14012295764C400635CCD /* KeychainAccessType.swift */; };
 		E7E14016295764C500635CCD /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14013295764C400635CCD /* KeychainConstants.swift */; };
@@ -96,6 +99,9 @@
 		E74D8DEA294C52A400B1E949 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E74D8DEB294C52A400B1E949 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E74D8DEC294C52A400B1E949 /* MainViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		E7A313BC29669436003A4C37 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E7A313BE29669481003A4C37 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		E7A313C02966954F003A4C37 /* SettingsProfileWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileWorker.swift; sourceTree = "<group>"; };
 		E7E1400B29575DCE00635CCD /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		E7E14012295764C400635CCD /* KeychainAccessType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessType.swift; sourceTree = "<group>"; };
 		E7E14013295764C400635CCD /* KeychainConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 				E722D9512962EE8E00649324 /* Settings */,
 				E722D94E2962EE8400649324 /* AchievementsView.swift */,
 				E722D94D2962EE8400649324 /* ProfileView.swift */,
+				E7A313BC29669436003A4C37 /* ProfileViewModel.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -190,6 +197,7 @@
 				E7E1400F2957644400635CCD /* Keychain */,
 				E74D8DCF2949BC5000B1E949 /* ServiceHelpers.swift */,
 				E74D8DD22949BC7C00B1E949 /* AuthorizationWorker.swift */,
+				E7A313C02966954F003A4C37 /* SettingsProfileWorker.swift */,
 				E7E14018295764D200635CCD /* OrganizationWorker.swift */,
 			);
 			path = Service;
@@ -198,6 +206,7 @@
 		E734CC772949BA0B00941E4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E7A313BE29669481003A4C37 /* NavigationView.swift */,
 				E74D8DE6294C528100B1E949 /* MainPage */,
 				E74D8DDC294AFBD600B1E949 /* Registration */,
 				E74D8DD52949C13900B1E949 /* Authorization */,
@@ -496,10 +505,13 @@
 				E74D8DE8294C529200B1E949 /* MainPageView.swift in Sources */,
 				E722D9482962EE5300649324 /* WidgetPointsView.swift in Sources */,
 				E7E14019295764D300635CCD /* OrganizationWorker.swift in Sources */,
+				E7A313BD29669436003A4C37 /* ProfileViewModel.swift in Sources */,
 				E7E14016295764C500635CCD /* KeychainConstants.swift in Sources */,
+				E7A313BF29669481003A4C37 /* NavigationView.swift in Sources */,
 				E74D8DE5294C526200B1E949 /* CstTextField.swift in Sources */,
 				E722D9542962EE9A00649324 /* CredentialViewCell.swift in Sources */,
 				E734CC872949BAF600941E4C /* Font.swift in Sources */,
+				E7A313C12966954F003A4C37 /* SettingsProfileWorker.swift in Sources */,
 				E722D94B2962EE5300649324 /* WidgetHelpedView.swift in Sources */,
 				E74D8DE0294AFBFC00B1E949 /* RegistrationView.swift in Sources */,
 				E74D8DEF294C52A400B1E949 /* MainViewCell.swift in Sources */,

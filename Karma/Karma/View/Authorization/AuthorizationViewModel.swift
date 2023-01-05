@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class AuthorizationViewModel: ObservableObject {
+    public let router: NavigationView
     @Published var username: String = ""
     @Published var password: String = ""
     @Published var showMainPage: Bool = false
@@ -16,6 +17,10 @@ class AuthorizationViewModel: ObservableObject {
     @Published var passwordError: String?
     private let authWorker = AuthorizationWorker()
     private let keychainManager = KeychainManager()
+    
+    init(router: NavigationView) {
+        self.router = router
+    }
     
     enum AuthorizationError {
         case loginEmpty, passwordEmpty, incorrectCredentials
@@ -44,6 +49,7 @@ class AuthorizationViewModel: ObservableObject {
                 case .success(let auth):
                     self?.showMainPage = true
                     self?.keychainManager.set(auth.accessToken, forKey: Constants.Keys.token)
+                    self?.router.changeState(.mainView)
                     break
                 case .failure(let error):
                     let errorTitle = AuthorizationError.incorrectCredentials.title

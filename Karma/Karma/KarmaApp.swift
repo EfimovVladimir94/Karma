@@ -19,7 +19,11 @@ struct KarmaApp: App {
                         UserDefaults.standard.set(true, forKey: Constants.Keys.completedOnboarding)
                     }
                 } else {
-                    AuthorizationView(viewModel: AuthorizationViewModel())
+                    if let token = KeychainManager().get(Constants.Keys.token), !token.isEmpty {
+                        NavigationView.init(withState: .mainView)
+                    } else {
+                        NavigationView.init(withState: .authorization)
+                    }
                 }
             }
             .onAppear {
