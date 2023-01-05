@@ -13,48 +13,53 @@ struct SettingsView: View {
     @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
-        VStack(spacing: 0) {
-            VStack {
-                HStack {
-                    Text("Настройки")
-                        .font(.medium(25))
-                    Spacer()
-                    Text("Готово")
-                        .onTapGesture {
-                            presentationMode.wrappedValue.dismiss()
-                        }
-                        .font(.bold(13))
+        ZStack {
+            Color.white.ignoresSafeArea()
+            VStack(spacing: 0) {
+                VStack {
+                    HStack {
+                        Text("Настройки")
+                            .font(.medium(25))
+                            .foregroundColor(.black)
+                        Spacer()
+                        Text("Готово")
+                            .onTapGesture {
+                                presentationMode.wrappedValue.dismiss()
+                            }
+                            .font(.bold(13))
+                            .foregroundColor(.black)
+                    }
+                    .padding(.horizontal, 25)
+                    CredentialViewCell(type: .name, text: "Ираклий")
+                        .padding(.leading, 25)
+                    CredentialViewCell(type: .phone, text: "+995 511 10 77")
+                        .padding(.leading, 25)
+                    CredentialViewCell(type: .email, text: "montage3by@gmail.com")
+                        .padding(.leading, 25)
                 }
-                .padding(.horizontal, 25)
-                CredentialViewCell(type: .name, text: "Ираклий")
-                    .padding(.leading, 25)
-                CredentialViewCell(type: .phone, text: "+995 511 10 77")
-                    .padding(.leading, 25)
-                CredentialViewCell(type: .email, text: "montage3by@gmail.com")
-                    .padding(.leading, 25)
-            }
-            .padding(.top, 16)
-            
-            notifications
-                .padding(.horizontal, 20)
+                .padding(.top, 16)
+                
+                notifications
+                    .padding(.horizontal, 20)
+                    .padding(.top, 50)
+                
+                Button {
+                    viewModel.logOut()
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    ZStack {
+                        Color.blue
+                        Text("Выход")
+                            .font(.bold(18))
+                            .foregroundColor(Color.white)
+                    }
+                }
+                .cornerRadius(10)
+                .frame(height: 53, alignment: .center)
                 .padding(.top, 50)
-            
-            Button {
-                viewModel.logOut()
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                ZStack {
-                    Color.blue
-                    Text("Выход")
-                        .font(.bold(18))
-                        .foregroundColor(Color.white)
-                }
+                .padding(.horizontal, 45)
+                Spacer()
             }
-            .cornerRadius(10)
-            .frame(height: 53, alignment: .center)
-            .padding(.top, 50)
-            .padding(.horizontal, 45)
-            Spacer()
         }
     }
     
@@ -63,11 +68,14 @@ struct SettingsView: View {
             VStack(alignment: .leading, spacing: 0) {
                 Text("Уведомления")
                     .font(.medium(17))
+                    .foregroundColor(.black)
                 Text("Push-уведомления о новостях проекта")
                     .font(.medium(13))
+                    .foregroundColor(.black)
                     .padding(.top, 17)
                 Text("Включить уведомления")
                     .font(.medium(13))
+                    .foregroundColor(.black)
                     .foregroundColor(Color.gray)
             }
             .padding(.leading, 25)

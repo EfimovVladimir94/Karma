@@ -26,6 +26,7 @@ struct CstTextField: View {
                 })
                 .frame(height: 56, alignment: .center)
                 .accentColor(.blue)
+                .foregroundColor(Color.black)
         }
         .frame(height: 46)
         .background(Rectangle()

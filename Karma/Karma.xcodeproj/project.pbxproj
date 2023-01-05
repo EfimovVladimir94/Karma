@@ -48,6 +48,7 @@
 		E7A313BD29669436003A4C37 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313BC29669436003A4C37 /* ProfileViewModel.swift */; };
 		E7A313BF29669481003A4C37 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313BE29669481003A4C37 /* NavigationView.swift */; };
 		E7A313C12966954F003A4C37 /* SettingsProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313C02966954F003A4C37 /* SettingsProfileWorker.swift */; };
+		E7A313C62967084E003A4C37 /* OrganizationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313C52967084D003A4C37 /* OrganizationDetailsView.swift */; };
 		E7E1400C29575DCE00635CCD /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E1400B29575DCE00635CCD /* Organization.swift */; };
 		E7E14015295764C500635CCD /* KeychainAccessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14012295764C400635CCD /* KeychainAccessType.swift */; };
 		E7E14016295764C500635CCD /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E14013295764C400635CCD /* KeychainConstants.swift */; };
@@ -102,6 +103,7 @@
 		E7A313BC29669436003A4C37 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		E7A313BE29669481003A4C37 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		E7A313C02966954F003A4C37 /* SettingsProfileWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileWorker.swift; sourceTree = "<group>"; };
+		E7A313C52967084D003A4C37 /* OrganizationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationDetailsView.swift; sourceTree = "<group>"; };
 		E7E1400B29575DCE00635CCD /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		E7E14012295764C400635CCD /* KeychainAccessType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessType.swift; sourceTree = "<group>"; };
 		E7E14013295764C400635CCD /* KeychainConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		E722D9512962EE8E00649324 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E722D9432962EE3800649324 /* Widgets */,
 				E722D9522962EE9A00649324 /* CredentialViewCell.swift */,
 				E722D9532962EE9A00649324 /* SettingsView.swift */,
 			);
@@ -339,7 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				E722D94C2962EE7200649324 /* ProfileView */,
-				E722D9432962EE3800649324 /* Widgets */,
 				E74D8DE9294C529500B1E949 /* MainView */,
 				E74D8DE7294C529200B1E949 /* MainPageView.swift */,
 			);
@@ -349,11 +351,20 @@
 		E74D8DE9294C529500B1E949 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				E7A313C429670836003A4C37 /* OrgDetails */,
 				E74D8DEB294C52A400B1E949 /* MainView.swift */,
 				E74D8DEC294C52A400B1E949 /* MainViewCell.swift */,
 				E74D8DEA294C52A400B1E949 /* MainViewModel.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		E7A313C429670836003A4C37 /* OrgDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E7A313C52967084D003A4C37 /* OrganizationDetailsView.swift */,
+			);
+			path = OrgDetails;
 			sourceTree = "<group>";
 		};
 		E7E1400F2957644400635CCD /* Keychain */ = {
@@ -487,6 +498,7 @@
 			files = (
 				E722D9422962ED4A00649324 /* WidgetDataSource.swift in Sources */,
 				E734CC7B2949BA4900941E4C /* OnboardingView.swift in Sources */,
+				E7A313C62967084E003A4C37 /* OrganizationDetailsView.swift in Sources */,
 				E722D9502962EE8400649324 /* AchievementsView.swift in Sources */,
 				E734CC892949BAF600941E4C /* BaseWorker.swift in Sources */,
 				E7E14017295764C500635CCD /* KeyChainManager.swift in Sources */,

@@ -15,35 +15,41 @@ struct OnboardingView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                HStack {
-                    Text("AZRI KARMA - платформа для благотворительности")
-                        .font(.bold(20))
-                        .foregroundColor(.white)
-                        .padding([.top], 25)
-                        .padding(.horizontal, 35)
-                        .multilineTextAlignment(.center)
+                VStack(spacing: 0) {
+                    HStack {
+                        Text("AZRI KARMA - платформа для благотворительности")
+                            .font(.bold(20))
+                            .foregroundColor(.white)
+                            .padding([.top], 25)
+                            .padding(.horizontal, 35)
+                            .multilineTextAlignment(.center)
+                    }
+                    TabView(selection: $selection) {
+                        Image("OnboardingLogo")
+                            .resizable()
+                            .scaledToFit()
+                            .tag(1)
+                        Image("OnboardEx1")
+                            .resizable()
+                            .scaledToFit()
+                            .tag(2)
+                        Image("OnboardEx2")
+                            .resizable()
+                            .scaledToFit()
+                            .tag(3)
+                        Image("OnboardingLogo")
+                            .resizable()
+                            .scaledToFit()
+                            .tag(4)
+                    }
+                    .padding(.top, 30)
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+                    .indexViewStyle(.page(backgroundDisplayMode: .automatic))
                 }
-                TabView(selection: $selection) {
-                    Image("OnboardingLogo")
-                        .resizable()
-                        .scaledToFit()
-                        .tag(1)
-                    Image("OnboardEx1")
-                        .resizable()
-                        .scaledToFit()
-                        .tag(2)
-                    Image("OnboardEx2")
-                        .resizable()
-                        .scaledToFit()
-                        .tag(3)
-                    Image("OnboardingLogo")
-                        .resizable()
-                        .scaledToFit()
-                        .tag(4)
-                }
-                .padding(.top, 30)
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                .indexViewStyle(.page(backgroundDisplayMode: .automatic))
+                .background(Ellipse()
+                    .foregroundColor(.blue)
+                    .frame(width: UIScreen.main.bounds.height, height: UIScreen.main.bounds.height)
+                    .padding(.top, -UIScreen.main.bounds.height/2))
                 
                 VStack(spacing: 0) {
                     pageControlView
@@ -82,10 +88,7 @@ struct OnboardingView: View {
             viewModel.selection = newValue
             viewModel.nextPage()
         })
-        .background(Ellipse()
-            .foregroundColor(.blue)
-            .frame(width: UIScreen.main.bounds.height, height: UIScreen.main.bounds.height)
-            .padding(.top, -UIScreen.main.bounds.height + 100))
+        .background(Color.white.ignoresSafeArea())
     }
     
     var pageControlView: some View {

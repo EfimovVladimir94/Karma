@@ -11,21 +11,27 @@ struct AchievementsView: View {
     var achievements: [String]
     
     var body: some View {
-        ScrollView {
-            VStack {
-                header
-                content
+        ZStack {
+            Color.white.ignoresSafeArea()
+            ScrollView {
+                VStack {
+                    header
+                    content
+                }
             }
+            .padding(.top, 16)
         }
-        .padding(.top, 16)
     }
     
     var header: some View {
         HStack {
-            Text("Настройки")
+            Text("Достижения")
                 .font(.medium(25))
+                .foregroundColor(.black)
             Spacer()
             Text("Готово")
+                .font(.bold(13))
+                .foregroundColor(.black)
                 .onTapGesture {
                     presentationMode.wrappedValue.dismiss()
                 }
@@ -44,8 +50,10 @@ struct AchievementsView: View {
                     VStack(alignment: .leading, spacing: 5) {
                         Text(items)
                             .font(.medium(17))
+                            .foregroundColor(.black)
                         Text("Описание достижения")
                             .font(.medium(13))
+                            .foregroundColor(.black)
                         Spacer()
                     }
                 }

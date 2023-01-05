@@ -18,7 +18,7 @@ private enum SettingsProfileService: TargetType {
     var baseURL: URL {
         switch self {
         case .logout:
-            return URL(string: "http://localhost:8081/api/auth")!
+            return URL(string: "http://192.168.100.10:8081/api/auth")!
         }
     }
     

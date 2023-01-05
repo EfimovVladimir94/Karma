@@ -34,9 +34,10 @@ struct ProfileView: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text("Ираклий")
                     .font(.medium(17))
+                    .foregroundColor(.black)
                 Text("Помогает с 2022 года.")
                     .font(.regular(13))
-                
+                    .foregroundColor(.black)
             }
             Image("Ellipse")
                 .resizable()

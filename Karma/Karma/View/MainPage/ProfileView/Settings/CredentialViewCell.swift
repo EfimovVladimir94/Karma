@@ -34,6 +34,7 @@ struct CredentialViewCell: View {
                 .foregroundColor(Color.gray)
             Text(text)
                 .font(.medium(17))
+                .foregroundColor(.black)
             Divider()
                 .padding(.top, 6)
         }

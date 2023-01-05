@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject var viewModel: MainViewModel
+    @State var showDetails = false
     
     var body: some View {
         VStack {
@@ -41,6 +42,9 @@ struct MainView: View {
                 LazyVStack(spacing: 30) {
                     ForEach(viewModel.filteredList) { items in
                         MainViewCell(title: items.name, text: items.description)
+                            .onTapGesture {
+                                showDetails.toggle()
+                            }
                     }
                 }
                 .padding(.bottom, 50)
@@ -50,6 +54,9 @@ struct MainView: View {
         }
         .onAppear {
             viewModel.loadData()
+        }
+        .fullScreenCover(isPresented: $showDetails) {
+            OrganizationDetailsView()
         }
     }
 }

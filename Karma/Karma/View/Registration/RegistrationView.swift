@@ -14,8 +14,11 @@ struct RegistrationView: View {
     var body: some View {
         ZStack {
             Color.white.ignoresSafeArea()
-            VStack(spacing: 0) {
+            VStack {
                 header
+                Spacer()
+            }
+            VStack(spacing: 0) {
                 ScrollView {
                     VStack(spacing: 0) {
                         Image("LaunchLogo")
@@ -24,6 +27,7 @@ struct RegistrationView: View {
                         form
                             .padding(.top, 21)
                         Button {
+                            presentationMode.wrappedValue.dismiss()
                             viewModel.registration()
                         } label: {
                             ZStack {
@@ -41,7 +45,6 @@ struct RegistrationView: View {
                     .padding(.horizontal, 40)
                 }
             }
-            
         }
     }
 }

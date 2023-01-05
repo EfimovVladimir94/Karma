@@ -34,6 +34,7 @@ extension AuthorizationView {
                         })
                         .frame(height: 46, alignment: .center)
                         .accentColor(.blue)
+                        .foregroundColor(Color.black)
                 }
                 .background(Rectangle()
                     .fill(Color.white)
