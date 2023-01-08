@@ -25,8 +25,14 @@ class ProfileViewModel: ObservableObject {
     }
     
     func loadData() {
-        loadAchievements()
-        loadInvitedFriends()
+
+        self.login = "Ираклий"
+        self.phone = "+995 511 10 77"
+        self.email = "montage3by@gmail.com"
+        self.achievements = [.init(id: 1, name: "Название", description: "Описание достижения"),
+                             .init(id: 2, name: "Название2", description: "Описание достижения")]
+        self.invitedFriends = [.init(id: 1, name: "Название", description: ""),
+                               .init(id: 1, name: "Название", description: "")]
     }
     
     func loadUserInfo() {
@@ -89,10 +95,14 @@ class ProfileViewModel: ObservableObject {
                 switch result {
                 case .success(_):
                     self?.keychainManager.set("", forKey: Constants.Keys.token)
+                    self?.showAuthorization = true
                     self?.router.changeState(.authorization)
                     break
                 case .failure(_):
+                    self?.keychainManager.set("", forKey: Constants.Keys.token)
+                    self?.showAuthorization = true
                     self?.router.changeState(.authorization)
+                    break
                 }
             }
         }
