@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WidgetHelpedView: View {
-    var friends: [String]
+    var friends: [InvitedFriends]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -24,21 +24,15 @@ struct WidgetHelpedView: View {
                 .padding(.top, 22)
                 .padding(.horizontal, 25)
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(friends, id: \.description) { friend in
-                        VStack(alignment: .leading, spacing: 0) {
-                            HStack(spacing: 20) {
-                                ForEach(friends, id: \.description) { friend in
-                                    Image(friend)
-                                        .resizable()
-                                        .frame(width: 70, height: 70)
-                                }
-                            }
-                            .padding(.top, 10)
-                        }
+                HStack(spacing: 20) {
+                    ForEach(friends, id: \.id) { friend in
+                        Image("Profile")
+                            .resizable()
+                            .frame(width: 70, height: 70)
                     }
                 }
-                .padding(.leading, 20)
+                .padding(.top, 10)
+                .padding(.horizontal, 20)
             }
             Button {
                 //TODO: sharelinck
@@ -61,6 +55,7 @@ struct WidgetHelpedView: View {
 
 struct WidgetHelpedView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetHelpedView(friends: ["Profile"])
+        WidgetHelpedView(friends: [.init(id: 1, name: "xzxz", description: "xz"),
+                                   .init(id: 2, name: "xzxz2", description: "xz3")])
     }
 }

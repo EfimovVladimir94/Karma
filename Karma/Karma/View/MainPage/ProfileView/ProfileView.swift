@@ -13,11 +13,16 @@ struct ProfileView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack(spacing: 25) {
+            LazyVStack(spacing: 25) {
                 header
                 WidgetFactoryView(datasource: .init(amountLbl: "154", type: .points))
-                WidgetFactoryView(datasource: .init(amountLbl: "154", type: .helped))
-                WidgetFactoryView(datasource: .init(amountLbl: "154", type: .achievements))
+                WidgetFactoryView(datasource: .init(
+                    amountLbl: "155",
+                    type: .helped,
+                    friends: viewModel.invitedFriends)
+                )
+                WidgetFactoryView(datasource: .init(type: .mySubscribers))
+                WidgetFactoryView(datasource: .init(type: .achievements, achievements: viewModel.achievements))
             }
             .padding(.horizontal, 12)
             .padding(.bottom, 100)

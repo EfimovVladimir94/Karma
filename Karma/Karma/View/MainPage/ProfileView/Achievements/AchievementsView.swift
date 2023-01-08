@@ -8,7 +8,7 @@
 import SwiftUI
 struct AchievementsView: View {
     @Environment(\.presentationMode) var presentationMode
-    var achievements: [String]
+    @State var achievements: [Achievement]
     
     var body: some View {
         ZStack {
@@ -35,37 +35,38 @@ struct AchievementsView: View {
                 .onTapGesture {
                     presentationMode.wrappedValue.dismiss()
                 }
-                .font(.bold(13))
         }
         .padding(.horizontal, 25)
     }
     
     var content: some View {
         LazyVStack(spacing: 20) {
-            ForEach(achievements, id: \.description) { items in
+            ForEach(achievements, id: \.id) { item in
                 HStack(spacing: 16) {
                     Rectangle()
                         .foregroundColor(Color.gray)
                         .frame(width: 135, height: 116)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text(items)
+                        Text(item.name)
                             .font(.medium(17))
                             .foregroundColor(.black)
-                        Text("Описание достижения")
+                        Text(item.description)
                             .font(.medium(13))
                             .foregroundColor(.black)
                         Spacer()
                     }
+                    Spacer()
                 }
                 .padding(16)
                 .modifier(WidgetModifier())
             }
         }
+        .padding(.horizontal, 20)
     }
 }
 
 struct AchievementsView_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementsView(achievements: ["Название", "Название2", "Название3"])
+        AchievementsView(achievements: [.init(id: 1, name: "Рем Дигга", description: "как Пак")])
     }
 }
