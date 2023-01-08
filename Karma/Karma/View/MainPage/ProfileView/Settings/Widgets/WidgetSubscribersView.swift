@@ -14,8 +14,10 @@ struct WidgetSubscribersView: View {
                 VStack (alignment: .leading) {
                     Text("Мои подписки:")
                         .font(.medium(17))
+                        .foregroundColor(.black)
                     Text("К сожалению, на данный момент вы не помогаете ни одному фонду")
                         .font(.medium(15))
+                        .foregroundColor(.black)
                 }
                 Button {
                     //TODO: choose fund

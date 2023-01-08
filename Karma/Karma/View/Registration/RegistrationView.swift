@@ -16,33 +16,32 @@ struct RegistrationView: View {
             Color.white.ignoresSafeArea()
             VStack {
                 header
-                Spacer()
-            }
-            VStack(spacing: 0) {
-                ScrollView {
-                    VStack(spacing: 0) {
-                        Image("LaunchLogo")
-                            .frame(width: 227, height: 157, alignment: .center)
-                            .padding(.top, 70)
-                        form
-                            .padding(.top, 21)
-                        Button {
-                            presentationMode.wrappedValue.dismiss()
-                            viewModel.registration()
-                        } label: {
-                            ZStack {
-                                Color.blue
-                                Text("Регистрация")
-                                    .font(.bold(18))
-                                    .foregroundColor(Color.white)
+                VStack(spacing: 0) {
+                    ScrollView {
+                        VStack(spacing: 0) {
+                            Image("LaunchLogo")
+                                .frame(width: 227, height: 157, alignment: .center)
+                                .padding(.top, 70)
+                            form
+                                .padding(.top, 21)
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                                viewModel.registration()
+                            } label: {
+                                ZStack {
+                                    Color.blue
+                                    Text("Регистрация")
+                                        .font(.bold(18))
+                                        .foregroundColor(Color.white)
+                                }
                             }
+                            .cornerRadius(10)
+                            .frame(height: 53, alignment: .center)
+                            .padding(.top, 45)
+                            Spacer()
                         }
-                        .cornerRadius(10)
-                        .frame(height: 53, alignment: .center)
-                        .padding(.top, 45)
-                        Spacer()
+                        .padding(.horizontal, 40)
                     }
-                    .padding(.horizontal, 40)
                 }
             }
         }

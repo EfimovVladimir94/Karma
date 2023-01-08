@@ -15,6 +15,7 @@ struct WidgetAchievementView: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Мои достижения:")
                 .font(.medium(17))
+                .foregroundColor(.black)
                 .padding(.horizontal, 25)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -25,6 +26,7 @@ struct WidgetAchievementView: View {
                                 .frame(width: 70, height: 70)
                             Text(achievement.name)
                                 .font(.medium(17))
+                                .foregroundColor(.black)
                                 .padding(.top, 22)
                         }
                     }

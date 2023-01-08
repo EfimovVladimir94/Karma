@@ -16,8 +16,10 @@ struct WidgetPointsView: View {
                     VStack (alignment: .leading) {
                         Text("Очков кармы")
                             .font(.medium(17))
+                            .foregroundColor(.black)
                         Text("154")
                             .font(.medium(25))
+                            .foregroundColor(.black)
                     }
                     .padding(.top, 8)
                     Spacer()
