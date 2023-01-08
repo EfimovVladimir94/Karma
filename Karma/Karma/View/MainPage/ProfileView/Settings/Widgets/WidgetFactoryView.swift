@@ -15,10 +15,13 @@ struct WidgetFactoryView: View {
             WidgetPointsView()
                 .modifier(WidgetModifier())
         case .helped:
-            WidgetHelpedView(friends: ["Profile", "Profile", "Profile", "Profile", "Profile"])
+            WidgetHelpedView(friends: datasource.friends)
                 .modifier(WidgetModifier())
         case .achievements:
-            WidgetAchievementView(achievemnts: ["Profile", "Profile", "Profile", "Profile", "Profile"])
+            WidgetAchievementView(achievements: datasource.achievements)
+                .modifier(WidgetModifier())
+        case .mySubscribers:
+            WidgetSubscribersView()
                 .modifier(WidgetModifier())
         }
     }

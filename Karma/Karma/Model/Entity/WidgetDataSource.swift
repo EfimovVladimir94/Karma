@@ -8,12 +8,12 @@
 import SwiftUI
 
 enum WidgetType {
-    case points, helped, achievements
+    case points, helped, achievements, mySubscribers
 }
 
 struct WidgetDataSource: Hashable {
-    var amountLbl: String
+    var amountLbl: String?
     var type: WidgetType
-    var friends: [String] = []
-    var achievements: [String] = []
+    var friends: [InvitedFriends] = []
+    var achievements: [Achievement] = []
 }

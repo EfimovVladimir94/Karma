@@ -15,50 +15,56 @@ struct SettingsView: View {
     var body: some View {
         ZStack {
             Color.white.ignoresSafeArea()
-            VStack(spacing: 0) {
-                VStack {
-                    HStack {
-                        Text("Настройки")
-                            .font(.medium(25))
-                            .foregroundColor(.black)
-                        Spacer()
-                        Text("Готово")
-                            .onTapGesture {
-                                presentationMode.wrappedValue.dismiss()
-                            }
-                            .font(.bold(13))
-                            .foregroundColor(.black)
+            ScrollView {
+                VStack(spacing: 0) {
+                    VStack {
+                        HStack {
+                            Text("Настройки")
+                                .font(.medium(25))
+                                .foregroundColor(.black)
+                            Spacer()
+                            Text("Готово")
+                                .onTapGesture {
+                                    viewModel.updateUserInfo()
+                                    presentationMode.wrappedValue.dismiss()
+                                }
+                                .font(.bold(13))
+                                .foregroundColor(.black)
+                        }
+                        .padding(.horizontal, 25)
+                        VStack(spacing: 13) {
+                            CredentialViewCell(type: .name, text: $viewModel.login)
+                            CredentialViewCell(type: .phone, text: $viewModel.phone)
+                            CredentialViewCell(type: .email, text: $viewModel.email)
+                        }
+                        .padding([.leading, .top], 25)
                     }
-                    .padding(.horizontal, 25)
-                    CredentialViewCell(type: .name, text: "Ираклий")
-                        .padding(.leading, 25)
-                    CredentialViewCell(type: .phone, text: "+995 511 10 77")
-                        .padding(.leading, 25)
-                    CredentialViewCell(type: .email, text: "montage3by@gmail.com")
-                        .padding(.leading, 25)
-                }
-                .padding(.top, 16)
-                
-                notifications
-                    .padding(.horizontal, 20)
+                    .padding(.top, 16)
+                    
+                    notifications
+                        .padding(.horizontal, 20)
+                        .padding(.top, 50)
+                    
+                    Button {
+                        viewModel.logOut()
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        ZStack {
+                            Color.blue
+                            Text("Выход")
+                                .font(.bold(18))
+                                .foregroundColor(Color.white)
+                        }
+                    }
+                    .cornerRadius(10)
+                    .frame(height: 53, alignment: .center)
                     .padding(.top, 50)
-                
-                Button {
-                    viewModel.logOut()
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    ZStack {
-                        Color.blue
-                        Text("Выход")
-                            .font(.bold(18))
-                            .foregroundColor(Color.white)
-                    }
+                    .padding(.horizontal, 45)
+                    Spacer()
                 }
-                .cornerRadius(10)
-                .frame(height: 53, alignment: .center)
-                .padding(.top, 50)
-                .padding(.horizontal, 45)
-                Spacer()
+            }
+            .onAppear {
+                viewModel.loadUserInfo()
             }
         }
     }

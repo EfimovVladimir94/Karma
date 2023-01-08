@@ -25,19 +25,20 @@ enum CredentialTypes {
 struct CredentialViewCell: View {
     
     @State var type: CredentialTypes
-    @State var text: String
+    @Binding var text: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(type.title)
                 .font(.medium(13))
                 .foregroundColor(Color.gray)
-            Text(text)
-                .font(.medium(17))
-                .foregroundColor(.black)
+            TextField("", text: $text)
+                .autocapitalization(.none)
+                .frame(height: 17, alignment: .center)
+                .accentColor(.black)
+                .foregroundColor(Color.black)
             Divider()
-                .padding(.top, 6)
+                .padding(.top, 10)
         }
-        .padding(.top, 13)
     }
 }

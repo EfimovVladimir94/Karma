@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WidgetAchievementView: View {
-    var achievemnts: [String]
+    var achievements: [Achievement]
     @State var showAchievements = false
     
     var body: some View {
@@ -18,12 +18,12 @@ struct WidgetAchievementView: View {
                 .padding(.horizontal, 25)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(achievemnts, id: \.description) { friend in
+                    ForEach(achievements, id: \.id) { achievement in
                         VStack(spacing: 0) {
-                            Image(friend)
+                            Image("Profile")
                                 .resizable()
                                 .frame(width: 70, height: 70)
-                            Text("Название")
+                            Text(achievement.name)
                                 .font(.medium(17))
                                 .padding(.top, 22)
                         }
@@ -49,13 +49,13 @@ struct WidgetAchievementView: View {
         }
         .padding(.vertical, 15)
         .sheet(isPresented: $showAchievements) {
-            AchievementsView(achievements: ["Название", "Название2", "Название3"])
+            AchievementsView(achievements: achievements)
         }
     }
 }
 
 struct WidgetAchievementView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetAchievementView(achievemnts: ["Profile", "Profile", "Profile", "Profile", "Profile"])
+        WidgetAchievementView(achievements: [.init(id: 1, name: "Триада", description: "Нежный омут")])
     }
 }
