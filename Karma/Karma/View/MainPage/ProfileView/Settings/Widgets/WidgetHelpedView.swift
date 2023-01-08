@@ -14,13 +14,16 @@ struct WidgetHelpedView: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Через вас помогли на сумму")
                 .font(.medium(17))
+                .foregroundColor(.black)
                 .padding(.horizontal, 25)
             Text("154 ₽")
                 .font(.medium(25))
+                .foregroundColor(.black)
                 .padding(.top, 3)
                 .padding(.horizontal, 25)
             Text("Люди которых вы пригласили:")
                 .font(.medium(17))
+                .foregroundColor(.black)
                 .padding(.top, 22)
                 .padding(.horizontal, 25)
             ScrollView(.horizontal, showsIndicators: false) {
