@@ -63,9 +63,6 @@ struct SettingsView: View {
                     Spacer()
                 }
             }
-            .onAppear {
-                viewModel.loadUserInfo()
-            }
         }
     }
     

@@ -38,7 +38,7 @@ struct WidgetHelpedView: View {
                 .padding(.horizontal, 20)
             }
             Button {
-                //TODO: sharelinck
+                shareButton()
             } label: {
                 ZStack {
                     Color.blue
@@ -53,6 +53,20 @@ struct WidgetHelpedView: View {
             .padding(.horizontal, 25)
         }
         .padding(.vertical, 15)
+    }
+}
+
+extension WidgetHelpedView {
+    func shareButton() {
+        // TODO: replace URL
+        if let url = URL(string: "https://designcode.io") {
+            let activityController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            if let root = UIApplication.shared.windows.first?.rootViewController {
+                root.present(
+                    activityController, animated: true,
+                    completion: nil)
+            }
+        }
     }
 }
 
