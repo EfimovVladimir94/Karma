@@ -36,7 +36,7 @@ struct MainPageView: View {
             }
             VStack {
                 Spacer()
-                barButtonView
+                FloatingTabbar(selected: .constant(1))
             }
             .ignoresSafeArea()
         }
