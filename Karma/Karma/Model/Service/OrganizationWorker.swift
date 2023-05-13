@@ -19,7 +19,7 @@ private enum OrganizationService: TargetType {
     var baseURL: URL {
         switch self {
         case .getOrganizationList:
-            return URL(string: "http://localhost:8081/api/v1/main")!
+            return URL(string: "http://192.168.100.9:8081/api/v1/main")!
         }
     }
     

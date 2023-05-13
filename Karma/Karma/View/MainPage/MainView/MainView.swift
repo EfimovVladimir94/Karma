@@ -10,6 +10,8 @@ import SwiftUI
 struct MainView: View {
     @ObservedObject var viewModel: MainViewModel
     @State var showDetails = false
+    @State var showCategories = false
+    
     
     var body: some View {
         VStack {
@@ -27,7 +29,7 @@ struct MainView: View {
             }
             
             Button {
-                //                viewModel.loginAction()
+                showCategories = true
             } label: {
                 HStack {
                     Text("Категории")
@@ -54,10 +56,15 @@ struct MainView: View {
         }
         .onAppear {
             viewModel.loadData()
+//            KeychainManager().set("", forKey: Constants.Keys.token)
+            
         }
         .fullScreenCover(isPresented: $showDetails) {
             OrganizationDetailsView()
         }
+        .sheet(isPresented: $showCategories, content: {
+            CategoriesView(viewModel: .init())
+        })
     }
 }
 
