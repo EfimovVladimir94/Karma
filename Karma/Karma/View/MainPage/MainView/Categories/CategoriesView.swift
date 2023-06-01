@@ -16,7 +16,7 @@ struct CategoriesView: View {
                 Color.white
                     .cornerRadius(20, corners: [.topLeft, .topRight])
                     .ignoresSafeArea()
-                VStack {
+                VStack(spacing: 0) {
                     header
                     content
                     Spacer()
@@ -38,17 +38,16 @@ struct CategoriesView: View {
                     .font(.medium(25))
                     .foregroundColor(Color.black)
                     .padding(.top, 20)
-                    .padding(.leading, 34)
+                    .padding(.leading, 13)
                 Spacer()
-                Image("Cancel")
+                Image("cancel")
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20, alignment: .center)
-                    .padding(.horizontal, 12)
+                    .frame(width: 24, height: 24)
                     .onTapGesture {
                         presentationMode.wrappedValue.dismiss()
                     }
             }
+            .padding(.horizontal, 12)
         }
     }
     
@@ -57,17 +56,28 @@ struct CategoriesView: View {
             LazyVGrid(columns: Array(repeating: GridItem(.fixed(80), spacing: 35), count: 3),
                       alignment: .center,
                       spacing: 33) {
-                ForEach(Array(viewModel.categories.enumerated()), id: \.offset) { item in
+                ForEach(viewModel.categories) { item in
                     VStack {
                         ZStack {
-                            Color.red
+                            RoundedCorner(radius: 10)
+                                .foregroundColor(Color.lightGray)
+                            VStack(spacing: 2) {
+                                Image("\(item)")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 60, height: 70)
+                                    .padding(.bottom, item == .all ? 0 : 20)
+                            }
+                            .frame(width: 60, height: 70)
                         }
                         .frame(width: 80, height: 80)
-                        .cornerRadius(10)
-                        Text(item.element)
+                        Text(item.title)
+                            .lineLimit(1)
+                            .font(.regular(12))
                     }
                 }
             }
+                      .padding(.top, 20)
         }
     }
 }

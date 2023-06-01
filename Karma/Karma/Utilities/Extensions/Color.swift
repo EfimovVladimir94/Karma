@@ -8,4 +8,5 @@
 import SwiftUI
 extension Color {
     static var lightGray = Color(red: 0.851, green: 0.851, blue: 0.851)
+    static var primaryAction = Color(red: 0.09, green: 0.518, blue: 0.91)
 }

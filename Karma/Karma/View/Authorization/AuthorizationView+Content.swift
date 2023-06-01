@@ -52,7 +52,7 @@ extension AuthorizationView {
                             .background(Circle.init().foregroundColor(.blue))
                             .onTapGesture {
                             }
-                        Image("Telegram")
+                        Image("telegram")
                             .frame(width: 42, height: 42, alignment: .center)
                             .background(Circle.init().foregroundColor(.blue))
                             .onTapGesture {

@@ -16,7 +16,7 @@ private enum AuthorizationService: TargetType {
     var baseURL: URL {
         switch self {
             // TODO: replace
-        case .authorization, .registration: return URL(string: "http://192.168.100.9:8081/api/auth")!
+        case .authorization, .registration: return URL(string: "http://localhost:8080/api/v1/auth")!
         }
     }
     
