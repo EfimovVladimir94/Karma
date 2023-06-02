@@ -60,20 +60,23 @@ struct CategoriesView: View {
                     VStack {
                         ZStack {
                             RoundedCorner(radius: 10)
-                                .foregroundColor(Color.lightGray)
+                                .foregroundColor(item.isSelect ? Color.primaryAction : Color.lightGray)
                             VStack(spacing: 2) {
-                                Image("\(item)")
+                                Image("\(item.type)")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 60, height: 70)
-                                    .padding(.bottom, item == .all ? 0 : 20)
+                                    .padding(.bottom, item.type == .all ? 0 : 20)
                             }
                             .frame(width: 60, height: 70)
                         }
                         .frame(width: 80, height: 80)
-                        Text(item.title)
+                        .onTapGesture {
+                            viewModel.selectedCategory = item
+                        }
+                        Text(item.type.title)
                             .lineLimit(1)
-                            .font(.regular(12))
+                            .font(.regular(9))
                     }
                 }
             }

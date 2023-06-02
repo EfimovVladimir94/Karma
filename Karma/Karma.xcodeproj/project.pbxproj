@@ -714,7 +714,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Karma/Preview Content\"";
-				DEVELOPMENT_TEAM = U8RYS8TVG9;
+				DEVELOPMENT_TEAM = 2538RJ4823;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Karma/Info.plist;
@@ -729,7 +729,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.azri.Karma;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azri.KarmaTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -47,17 +47,17 @@ extension AuthorizationView {
                         .font(.medium(15))
                         .frame(alignment: .center)
                     HStack(spacing: 15) {
-                        Image("Instagram")
-                            .frame(width: 42, height: 42, alignment: .center)
-                            .background(Circle.init().foregroundColor(.blue))
-                            .onTapGesture {
-                            }
-                        Image("telegram")
-                            .frame(width: 42, height: 42, alignment: .center)
-                            .background(Circle.init().foregroundColor(.blue))
-                            .onTapGesture {
-                            }
                         Image("Google")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                        Image("apple")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                        Image("facebook")
                             .frame(width: 42, height: 42, alignment: .center)
                             .background(Circle.init().foregroundColor(.blue))
                             .onTapGesture {

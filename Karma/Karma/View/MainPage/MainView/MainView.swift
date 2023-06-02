@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewModel = MainViewModel()
+    @ObservedObject var categoryViewModel = CategoriesViewModel()
     @State var showDetails = false
     @State var showCategories = false
-    
     
     var body: some View {
         VStack {
@@ -62,9 +62,15 @@ struct MainView: View {
         .fullScreenCover(isPresented: $showDetails) {
             OrganizationDetailsView()
         }
-        .sheet(isPresented: $showCategories, content: {
-            CategoriesView(viewModel: .init())
-        })
+        .sheet(
+            isPresented: $showCategories,
+            onDismiss: {
+//                print("xzxz \(categoryViewModel.categories.filter { $0.isSelect })")
+            },
+            content: {
+                CategoriesView(viewModel: categoryViewModel)
+            }
+        )
     }
 }
 
