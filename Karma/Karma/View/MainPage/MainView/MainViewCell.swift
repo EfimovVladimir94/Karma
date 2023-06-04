@@ -8,59 +8,79 @@
 import SwiftUI
 
 struct MainViewCell: View {
-    var title: String
-    var text: String
+    var categoryImageName: String
+    var orgName: String
+    var orgLocation: String
+    var orgDescription: String
     
     var body: some View {
-        ZStack(alignment: .topLeading) {
-            VStack(alignment: .leading) {
-                Image("LabelOrg")
-                    .foregroundColor(.white)
-                    .padding(.leading, 10)
-                    .padding(.trailing, 40)
-                    .padding(.vertical, 20)
-            }
-            .background(Color.blue)
-            .cornerRadius(40, corners: [.topRight,.bottomRight])
-            .padding(.top, 21)
-            .zIndex(10)
-            
-            content
-        }
-    }
-    
-    var content: some View {
-        ZStack {
-            HStack {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(title)
-                        .font(.bold(25))
-                        .foregroundColor(Color.black)
-                    Text(text)
-                        .font(.medium(16))
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)
+        HStack(alignment: .top, spacing: 0) {
+            VStack(spacing: 0) {
+                HStack {
+                    Image("testimage1")
+                        .frame(width: 50, height: 50)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(orgName)
+                            .font(.regular(20))
+                            .foregroundColor(Color.black)
+                        Text(orgLocation)
+                            .font(.regular(10))
+                            .foregroundColor(Color.black)
+                    }
+                    Spacer()
                 }
-                .padding(.leading, 50)
+                .padding(.top, 18)
+                
+                Text(orgDescription)
+                    .font(.regular(10))
+                    .foregroundColor(Color.black)
+                    .multilineTextAlignment(.leading)
+                    .padding(.top, 6)
+                
+                HStack(spacing: 15) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(Color.primaryAction)
+                        Text("Пожертвовать фонду")
+                            .font(.bold(9))
+                            .foregroundColor(Color.white)
+                            .padding(5)
+                    }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.primaryAction, lineWidth: 1)
+                        Text("Подробнее")
+                            .font(.bold(9))
+                            .foregroundColor(Color.primaryAction)
+                            .padding(5)
+                    }
+                }
+                .frame(height: 25)
+                .padding(.vertical, 15)
             }
-            .frame(width: UIScreen.main.bounds.width - 100, height: 200, alignment: .top)
-            .padding(.vertical, 10)
-            .background(Rectangle()
-                .fill(Color.white)
-                .cornerRadius(21)
-                .shadow(
-                    color: Color.gray.opacity(0.7),
-                    radius: 5,
-                    x: 0,
-                    y: 0
-                ))
+            .padding(.leading, 20)
+            HStack {
+                Image(categoryImageName)
+                    .frame(width: 30, height: 30)
+            }
+            .padding(5)
         }
-        .frame(width: UIScreen.main.bounds.width)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.lightGray, lineWidth: 1)
+        )
     }
 }
 
 struct MainViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainViewCell(title: "", text: "")
+        MainViewCell(
+            categoryImageName: "animalsIcon",
+            orgName: "Batumi dog house",
+            orgLocation: "Батуми, Грузия",
+            orgDescription: "Организация занимаеться сбором средств для приютов" +
+            " и прочей деятельностью связанной с защитой животных."
+        )
+        .frame(height: 200)
     }
 }
