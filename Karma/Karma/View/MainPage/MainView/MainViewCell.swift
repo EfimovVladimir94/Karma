@@ -17,7 +17,9 @@ struct MainViewCell: View {
         HStack(alignment: .top, spacing: 0) {
             VStack(spacing: 0) {
                 HStack {
-                    Image("testimage1")
+                    Image("testImage1")
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: 50, height: 50)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(orgName)

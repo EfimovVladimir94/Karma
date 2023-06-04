@@ -21,4 +21,7 @@ extension Font {
     static func light(_ size: CGFloat) -> Font {
         return Font.custom("Montserrat-Light", fixedSize: size)
     }
+    static func semibold(_ size: CGFloat) -> Font {
+        return Font.custom("Montserrat-SemiBold", fixedSize: size)
+    }
 }
