@@ -9,15 +9,51 @@ import SwiftUI
 
 struct OrganizationDetailsView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State var isShowFull = false
     
     var body: some View {
         VStack(spacing: 0) {
             header
-            shortDesc
-            Spacer()
+            logoView
+            content
         }
     }
+}
+
+
+struct OrganizationDetailsView_Previews: PreviewProvider {
+    static var previews: some View {
+        OrganizationDetailsView()
+    }
+}
+
+extension OrganizationDetailsView {
     
+    var content: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                aboutProject
+                certs
+                helpers
+                
+                Button {
+                    
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(.primaryAction)
+                        Text("Пожертвовать фонду")
+                            .font(.bold(17))
+                            .foregroundColor(.white)
+                    }
+                }
+                .frame(height: 50)
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+            }
+            .padding(.horizontal, 29)
+        }
+    }
     var header: some View {
         ZStack {
             Color.blue.ignoresSafeArea()
@@ -48,23 +84,107 @@ struct OrganizationDetailsView: View {
         .frame(maxWidth: .infinity)
     }
     
-    var shortDesc: some View {
-        VStack {
+    var logoView: some View {
+        ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.gray)
-                .frame(width: 170, height: 101, alignment: .center)
-            Text("Краткое описание")
-                .frame(alignment: .center)
                 .foregroundColor(.white)
-                .font(.medium(18))
+            Image("testImage1")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 110, height: 120)
         }
-        .background(Color.blue.frame(width: UIScreen.main.bounds.width))
+        .frame(height: 120)
+        .padding(.horizontal, 95)
+        .padding(.bottom, 14)
+        .background(
+            Color.blue
+                .frame(width: UIScreen.main.bounds.width)
+                .cornerRadius(30, corners: [.bottomLeft, .bottomRight]))
     }
-}
-
-
-struct OrganizationDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        OrganizationDetailsView()
+    
+    var aboutProject: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                Text("О проекте")
+                    .font(.semibold(20))
+                    .foregroundColor(.black)
+                Spacer()
+            }
+            
+            Text("Организация \"Спасение животных\" была основана несколько лет назад с целью борьбы с жестокостью к животным, сохранения их жизней и обеспечения им заботы и любви. Она занимается помощью животным, которые попали в беду...")
+                .lineLimit(isShowFull ? nil : 4)
+                .font(.regular(15))
+                .foregroundColor(.black)
+                .padding(.top, 10)
+            Text(isShowFull ? "Скрыть" : "Показать полностью")
+                .font(.semibold(15))
+                .kerning(1)
+                .foregroundColor(.primaryAction)
+                .padding(.top, 10)
+                .onTapGesture {
+                    isShowFull.toggle()
+                }
+        }
+        .padding(.top, 25)
+    }
+    
+    var certs: some View {
+        VStack(spacing: 10) {
+            HStack(spacing: 20) {
+                Text("Сертификаты")
+                    .font(.semibold(20))
+                    .foregroundColor(.black)
+                Spacer()
+            }
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) {
+                    Image("testcert1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 100)
+                    Image("testcert2")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 100)
+                    Image("testcert3")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 100)
+                }
+            }
+        }
+        .padding(.top, 20)
+    }
+    
+    var helpers: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Text("Помогают фонду")
+                    .font(.semibold(20))
+                    .foregroundColor(.black)
+                Spacer()
+            }
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 24) {
+                    Image("testhelpers1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 100)
+                    Image("testhelpers2")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 100)
+                    Image("testhelpers3")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 100)
+                    Image("testhelpers4")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 100)
+                }
+            }
+        }
+        .padding(.top, 20)
     }
 }

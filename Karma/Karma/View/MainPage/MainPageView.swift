@@ -23,7 +23,7 @@ struct MainPageView: View {
                 Spacer()
                 switch index {
                 case 0 :
-                    MainView(viewModel: MainViewModel())
+                    MainView()
                 case 1 :
                     ProfileView(viewModel: .init(router: router))
                 case 2 :
@@ -45,7 +45,7 @@ struct MainPageView: View {
     var barButtonView: some View {
         ZStack {
             VStack {
-                HStack(spacing: 50) {
+                HStack(spacing: 30) {
                     Button(action: {
                         index = 0
                     }, label: {
