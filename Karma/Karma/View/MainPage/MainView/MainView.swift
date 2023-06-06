@@ -55,7 +55,7 @@ struct MainView: View {
                             }
                     }
                 }
-                .padding(.horizontal, 30)
+                .padding(.horizontal, 37)
                 .padding(.bottom, 50)
                 .padding(.top, 10)
             }

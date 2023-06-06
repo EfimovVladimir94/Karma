@@ -48,11 +48,10 @@ extension OrganizationDetailsView {
                     }
                 }
                 .frame(height: 50)
-                
                 .padding(.horizontal, 20)
                 .padding(.top, 20)
             }
-            .padding(.horizontal, 25)
+            .padding(.horizontal, 29)
         }
     }
     var header: some View {

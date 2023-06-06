@@ -40,21 +40,29 @@ struct MainViewCell: View {
                     .padding(.top, 6)
                 
                 HStack(spacing: 15) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(Color.primaryAction)
-                        Text("Пожертвовать фонду")
-                            .font(.bold(9))
-                            .foregroundColor(Color.white)
-                            .padding(5)
+                    Button {
+                        
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color.primaryAction)
+                            Text("Пожертвовать фонду")
+                                .font(.bold(9))
+                                .foregroundColor(Color.white)
+                                .padding(5)
+                        }
                     }
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.primaryAction, lineWidth: 1)
-                        Text("Подробнее")
-                            .font(.bold(9))
-                            .foregroundColor(Color.primaryAction)
-                            .padding(5)
+                    Button {
+                        
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.primaryAction, lineWidth: 1)
+                            Text("Подробнее")
+                                .font(.bold(9))
+                                .foregroundColor(Color.primaryAction)
+                                .padding(5)
+                        }
                     }
                 }
                 .frame(height: 25)
@@ -63,6 +71,8 @@ struct MainViewCell: View {
             .padding(.leading, 20)
             HStack {
                 Image(categoryImageName)
+                    .resizable()
+                    .scaledToFit()
                     .frame(width: 30, height: 30)
             }
             .padding(5)

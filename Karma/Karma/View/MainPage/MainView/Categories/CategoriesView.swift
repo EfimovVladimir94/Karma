@@ -76,7 +76,7 @@ struct CategoriesView: View {
                         }
                         Text(item.type.title)
                             .lineLimit(1)
-                            .font(.regular(9))
+                            .font(.regular(12))
                     }
                 }
             }

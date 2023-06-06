@@ -45,7 +45,7 @@ struct MainPageView: View {
     var barButtonView: some View {
         ZStack {
             VStack {
-                HStack(spacing: 50) {
+                HStack(spacing: 30) {
                     Button(action: {
                         index = 0
                     }, label: {
