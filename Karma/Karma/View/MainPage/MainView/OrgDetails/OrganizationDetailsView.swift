@@ -9,7 +9,8 @@ import SwiftUI
 
 struct OrganizationDetailsView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State var isShowFull = false
+    @State var showFull = false
+    @State var showPayment = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -35,25 +36,18 @@ extension OrganizationDetailsView {
                 aboutProject
                 certs
                 helpers
-                
-                Button {
-                    
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.primaryAction)
-                        Text("Пожертвовать фонду")
-                            .font(.bold(17))
-                            .foregroundColor(.white)
-                    }
+                SubmitButton {
+                    showPayment.toggle()
                 }
-                .frame(height: 50)
-                .padding(.horizontal, 20)
-                .padding(.top, 20)
             }
             .padding(.horizontal, 29)
         }
+        .sheet(isPresented: $showPayment) {
+            PaymentView()
+        }
     }
+    
+    
     var header: some View {
         ZStack {
             Color.blue.ignoresSafeArea()
@@ -112,17 +106,17 @@ extension OrganizationDetailsView {
             }
             
             Text("Организация \"Спасение животных\" была основана несколько лет назад с целью борьбы с жестокостью к животным, сохранения их жизней и обеспечения им заботы и любви. Она занимается помощью животным, которые попали в беду...")
-                .lineLimit(isShowFull ? nil : 4)
+                .lineLimit(showFull ? nil : 4)
                 .font(.regular(15))
                 .foregroundColor(.black)
                 .padding(.top, 10)
-            Text(isShowFull ? "Скрыть" : "Показать полностью")
+            Text(showFull ? "Скрыть" : "Показать полностью")
                 .font(.semibold(15))
                 .kerning(1)
                 .foregroundColor(.primaryAction)
                 .padding(.top, 10)
                 .onTapGesture {
-                    isShowFull.toggle()
+                    showFull.toggle()
                 }
         }
         .padding(.top, 25)
