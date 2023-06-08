@@ -84,11 +84,17 @@ struct PaymentView: View {
                     }
                 }) {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.primaryAction, lineWidth: 1)
+                        let isSelected = selectedSegmentIndex == segments.firstIndex(of: segment)
+                        if isSelected {
+                            RoundedRectangle(cornerRadius: 10)
+                        } else {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.primaryAction, lineWidth: 1)
+                        }
                         Text("\(segment)₾")
                             .font(.semibold(15))
                             .frame(width: 80)
+                            .foregroundColor(isSelected ? .white : .primaryAction)
                     }
                     
                 }

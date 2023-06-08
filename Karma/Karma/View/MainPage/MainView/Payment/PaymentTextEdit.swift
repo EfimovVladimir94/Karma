@@ -13,23 +13,32 @@ struct PaymentTextEdit: View {
     
     var body: some View {
         HStack {
-            TextField("", text: $text)
-                .autocapitalization(.none)
-                .keyboardType(.numberPad)
-                .placeholder(when: text.isEmpty, placeholder: {
-                    HStack {
-                        Spacer()
-                        Text(placeholder)
-                            .font(.medium(25))
-                            .foregroundColor(.black)
-                        Spacer()
-                    }
-                })
-                .font(.medium(25))
-                .foregroundColor(Color.black)
-                .accentColor(.black)
+            Spacer()
+            HStack {
+                TextField("", text: $text)
+                    .autocapitalization(.none)
+                    .keyboardType(.numberPad)
+                    .placeholder(
+                        when: text.isEmpty,
+                        alignment: .center,
+                        placeholder: {
+                            Spacer()
+                            Text(placeholder)
+                                .font(.medium(25))
+                                .foregroundColor(.black)
+                            Spacer()
+                        }
+                    )
+                    .font(.medium(25))
+                    .foregroundColor(Color.black)
+                    .accentColor(.black)
+                    .frame(width: 200)
+            }
+            .multilineTextAlignment(.center)
+            .frame(height: 50)
+            
+            Spacer()
         }
-        .frame(height: 50)
         .background(Color.lightGray)
         .cornerRadius(10)
     }
