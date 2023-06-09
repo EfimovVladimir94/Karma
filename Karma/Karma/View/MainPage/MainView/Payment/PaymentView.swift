@@ -9,14 +9,18 @@ import SwiftUI
 
 struct PaymentView: View {
     @Environment(\.presentationMode) private var presentationMode
-    @State private var selectedSegmentIndex = 0
+    @State private var selectedSegmentIndex = 1
     @State var enteredPrice = ""
+    @State var showMethods = false
     private let segments = ["10", "30", "50"]
     
     var body: some View {
         ZStack {
             cancelBtn
             content
+        }
+        .sheet(isPresented: $showMethods) {
+            PaymentMethodView(viewModel: .init())
         }
     }
     
@@ -45,7 +49,7 @@ struct PaymentView: View {
                     iconName: "card",
                     showArrow: true,
                     completion: {
-                        
+                        showMethods.toggle()
                     }
                 )
                 .padding(.top, 10)

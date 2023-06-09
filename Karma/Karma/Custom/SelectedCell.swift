@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct SelectedCell: View {
-    @State var text = ""
-    @State var placeholder = ""
-    @State var iconName = ""
-    @State var showArrow = false
+    var text = ""
+    var placeholder = ""
+    var iconName = ""
+    var showArrow = false
+    var isSelected = false
     var completion: (() -> ())
     
     var body: some View {
@@ -22,7 +23,8 @@ struct SelectedCell: View {
                 HStack(spacing: 0) {
                     Image(iconName)
                         .resizable()
-                        .frame(width: 25, height: 17)
+                        .scaledToFit()
+                        .frame(width: 35, height: 25)
                     Text(text.isEmpty ? placeholder : text)
                         .font(.medium(15))
                         .padding(.horizontal, 15)
@@ -34,6 +36,14 @@ struct SelectedCell: View {
                             .renderingMode(.template)
                             .frame(width: 13, height: 22)
                     }
+                    if isSelected {
+                        Image("Check")
+                            .resizable()
+                            .renderingMode(.template)
+                            .foregroundColor(Color.primaryAction)
+                            .frame(width: 22, height: 22)
+                    }
+                    
                 }
                 Divider()
             }

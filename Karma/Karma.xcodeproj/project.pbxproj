@@ -41,6 +41,7 @@
 		E74D8DED294C52A400B1E949 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEA294C52A400B1E949 /* MainViewModel.swift */; };
 		E74D8DEE294C52A400B1E949 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEB294C52A400B1E949 /* MainView.swift */; };
 		E74D8DEF294C52A400B1E949 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D8DEC294C52A400B1E949 /* MainViewCell.swift */; };
+		E755671F2A336AA900FC8D00 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E755671E2A336AA900FC8D00 /* PaymentViewModel.swift */; };
 		E79B79932A2F8B2800D8CE2D /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B79922A2F8B2800D8CE2D /* PaymentView.swift */; };
 		E79B79952A2F945900D8CE2D /* SelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B79942A2F945900D8CE2D /* SelectedCell.swift */; };
 		E79B79972A2F979200D8CE2D /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79B79962A2F979200D8CE2D /* SubmitButton.swift */; };
@@ -52,6 +53,7 @@
 		E7A313BF29669481003A4C37 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313BE29669481003A4C37 /* NavigationView.swift */; };
 		E7A313C12966954F003A4C37 /* SettingsProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313C02966954F003A4C37 /* SettingsProfileWorker.swift */; };
 		E7A313C62967084E003A4C37 /* OrganizationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A313C52967084D003A4C37 /* OrganizationDetailsView.swift */; };
+		E7B5157C2A3237E40076F6F6 /* PaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5157B2A3237E40076F6F6 /* PaymentMethodView.swift */; };
 		E7BC86A7296B08AB0012793E /* InvitedFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC86A4296B08AB0012793E /* InvitedFriends.swift */; };
 		E7BC86A8296B08AB0012793E /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC86A5296B08AB0012793E /* Achievement.swift */; };
 		E7BC86A9296B08AB0012793E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC86A6296B08AB0012793E /* User.swift */; };
@@ -108,6 +110,7 @@
 		E74D8DEA294C52A400B1E949 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E74D8DEB294C52A400B1E949 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E74D8DEC294C52A400B1E949 /* MainViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		E755671E2A336AA900FC8D00 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		E77DDCD32A2C711000068B5C /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		E79B79922A2F8B2800D8CE2D /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		E79B79942A2F945900D8CE2D /* SelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCell.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		E7A313BE29669481003A4C37 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		E7A313C02966954F003A4C37 /* SettingsProfileWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileWorker.swift; sourceTree = "<group>"; };
 		E7A313C52967084D003A4C37 /* OrganizationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationDetailsView.swift; sourceTree = "<group>"; };
+		E7B5157B2A3237E40076F6F6 /* PaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodView.swift; sourceTree = "<group>"; };
 		E7BC86A4296B08AB0012793E /* InvitedFriends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitedFriends.swift; sourceTree = "<group>"; };
 		E7BC86A5296B08AB0012793E /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		E7BC86A6296B08AB0012793E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -400,6 +404,8 @@
 			children = (
 				E79B79922A2F8B2800D8CE2D /* PaymentView.swift */,
 				E79B79982A2F9F8E00D8CE2D /* PaymentTextEdit.swift */,
+				E7B5157B2A3237E40076F6F6 /* PaymentMethodView.swift */,
+				E755671E2A336AA900FC8D00 /* PaymentViewModel.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -579,6 +585,7 @@
 				E74D8DDB2949C14B00B1E949 /* AuthorizationView+LoginView.swift in Sources */,
 				E7E1401D2958741700635CCD /* Color.swift in Sources */,
 				E74D8DD02949BC5000B1E949 /* ServiceHelpers.swift in Sources */,
+				E755671F2A336AA900FC8D00 /* PaymentViewModel.swift in Sources */,
 				E79B79972A2F979200D8CE2D /* SubmitButton.swift in Sources */,
 				E734CC8A2949BAF600941E4C /* View+placeholder.swift in Sources */,
 				E74D8DD42949BC9500B1E949 /* Authorization.swift in Sources */,
@@ -586,6 +593,7 @@
 				E74D8DE8294C529200B1E949 /* MainPageView.swift in Sources */,
 				E7E14019295764D300635CCD /* OrganizationWorker.swift in Sources */,
 				E7BC86A8296B08AB0012793E /* Achievement.swift in Sources */,
+				E7B5157C2A3237E40076F6F6 /* PaymentMethodView.swift in Sources */,
 				E7A313BD29669436003A4C37 /* ProfileViewModel.swift in Sources */,
 				E7E14016295764C500635CCD /* KeychainConstants.swift in Sources */,
 				E7A313BF29669481003A4C37 /* NavigationView.swift in Sources */,
