@@ -13,7 +13,7 @@ struct PaymentMethodView: View {
     @State var showLinkNewCard = false
     var body: some View {
         VStack(spacing: 0) {
-            cancelBtn
+            HeaderModalView()
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Text("Способ оплаты")
@@ -46,19 +46,6 @@ struct PaymentMethodView: View {
             }
         }
        
-    }
-    
-    var cancelBtn: some View {
-        HStack {
-            Spacer()
-            Image("cancel")
-                .resizable()
-                .frame(width: 24, height: 24)
-                .padding(16)
-                .onTapGesture {
-                    presentationMode.wrappedValue.dismiss()
-                }
-        }
     }
 }
 

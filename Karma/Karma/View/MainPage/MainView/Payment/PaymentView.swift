@@ -15,8 +15,8 @@ struct PaymentView: View {
     private let segments = ["10", "30", "50"]
     
     var body: some View {
-        ZStack {
-            cancelBtn
+        VStack(spacing: 0) {
+            HeaderModalView()
             content
         }
         .sheet(isPresented: $showMethods) {
@@ -31,7 +31,6 @@ struct PaymentView: View {
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 74)
-                .padding(.top, 34)
             Text("Batumi, Georgia")
                 .font(.regular(15))
                 .foregroundColor(.black)
@@ -59,22 +58,6 @@ struct PaymentView: View {
                 Spacer()
             }
             .padding(.horizontal, 45)
-            Spacer()
-        }
-    }
-    
-    var cancelBtn: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Image("cancel")
-                    .resizable()
-                    .frame(width: 24, height: 24)
-                    .padding(16)
-                    .onTapGesture {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-            }
             Spacer()
         }
     }
