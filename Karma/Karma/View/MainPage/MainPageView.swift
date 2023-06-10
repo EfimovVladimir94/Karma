@@ -29,7 +29,9 @@ struct MainPageView: View {
                 case 2 :
                     ZStack {Color.green}
                 case 3 :
-                    ZStack {Color.black}
+                    ZStack {
+                        NewsView()
+                    }
                 default:
                     ZStack {Color.red}
                 }
@@ -104,7 +106,7 @@ struct MainPageView: View {
                         index = 3
                     }, label: {
                         VStack {
-                            Image("BurgerMenu")
+                            Image("news")
                                 .resizable()
                                 .renderingMode(.template)
                                 .foregroundColor(index == 3 ? .blue : .gray)
@@ -113,7 +115,7 @@ struct MainPageView: View {
                                     height: 25,
                                     alignment: .center
                                 )
-                            Text("Еще")
+                            Text("Новости")
                                 .font(.bold(10))
                                 .accentColor(index == 3 ? .blue : .gray)
                         }

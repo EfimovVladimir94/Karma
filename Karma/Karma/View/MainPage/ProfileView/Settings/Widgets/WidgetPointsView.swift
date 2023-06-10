@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WidgetPointsView: View {
+    @State var showOnboarding = false
     
     var body: some View {
         ZStack {
@@ -27,14 +28,24 @@ struct WidgetPointsView: View {
                         .resizable()
                         .frame(width: 115, height: 115)
                     Image("Hint")
+                        .resizable()
                         .frame(width: 16, height: 16)
+                        .onTapGesture {
+                            
+                        }
                 }
                 Text("Узнать подробнее")
                     .font(.medium(13))
                     .foregroundColor(.gray)
+                    .onTapGesture {
+                        showOnboarding.toggle()
+                    }
             }
             .padding(.horizontal, 27)
             .padding(.vertical, 9)
+        }
+        .sheet(isPresented: $showOnboarding) {
+            OnboardingView(viewModel: .init())
         }
     }
 }
