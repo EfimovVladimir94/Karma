@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewsItemViewCell: View {
     var item: News
+    var completion: (()->())?
     
     var body: some View {
         HStack {
@@ -28,7 +29,7 @@ struct NewsItemViewCell: View {
                             fontSize: 10,
                             height: 25
                         ) {
-                            
+                            completion?()
                         }
                         .padding(.trailing, 70)
                 }
@@ -37,6 +38,7 @@ struct NewsItemViewCell: View {
             .modifier(WidgetModifier())
             .frame(height: 150)
         }
+        .padding(.horizontal, 5)
     }
 }
 
