@@ -12,6 +12,7 @@ struct PaymentView: View {
     @State private var selectedSegmentIndex = 1
     @State var enteredPrice = ""
     @State var showMethods = false
+    @State var showThanks = false
     private let segments = ["10", "30", "50"]
     
     var body: some View {
@@ -21,6 +22,9 @@ struct PaymentView: View {
         }
         .sheet(isPresented: $showMethods) {
             PaymentMethodView(viewModel: .init())
+        }
+        .sheet(isPresented: $showThanks) {
+            ThanksView()
         }
     }
     
@@ -54,6 +58,7 @@ struct PaymentView: View {
                 .padding(.top, 10)
                 segmentPrice
                 SubmitButton(title: "Пожертвовать фонду") {
+                    showThanks.toggle()
                 }
                 .padding(.top, 20)
                 Spacer()

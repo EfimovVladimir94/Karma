@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ThanksView: View {
+    
     var body: some View {
         VStack(spacing: 20) {
             Image("LaunchLogo")

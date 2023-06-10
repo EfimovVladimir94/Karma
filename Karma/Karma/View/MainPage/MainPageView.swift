@@ -27,11 +27,9 @@ struct MainPageView: View {
                 case 1 :
                     ProfileView(viewModel: .init(router: router))
                 case 2 :
-                    ZStack {Color.green}
+                    KarmaBonusView()
                 case 3 :
-                    ZStack {
-                        NewsView()
-                    }
+                    NewsView()
                 default:
                     ZStack {Color.red}
                 }
