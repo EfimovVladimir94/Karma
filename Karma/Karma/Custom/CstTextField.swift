@@ -11,6 +11,7 @@ struct CstTextField: View {
     @Binding var text: String
     var imageName: String = ""
     var placeholder: String = ""
+    var height: CGFloat = 56
     
     var body: some View {
         HStack(spacing: 11) {
@@ -28,7 +29,7 @@ struct CstTextField: View {
                 .accentColor(.blue)
                 .foregroundColor(Color.black)
         }
-        .frame(height: 46)
+        .frame(height: height)
         .background(Rectangle()
             .fill(Color.white)
             .cornerRadius(10)

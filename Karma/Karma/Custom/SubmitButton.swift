@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SubmitButton: View {
+    var title = ""
+    var isInvertStyle = false
     var submit: (() -> ())
     var body: some View {
         HStack {
@@ -15,11 +17,17 @@ struct SubmitButton: View {
                 submit()
             } label: {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.primaryAction)
-                    Text("Пожертвовать фонду")
+                    if isInvertStyle {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.primaryAction, lineWidth: 1)
+                    } else {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(.primaryAction)
+                    }
+                    
+                    Text(title)
                         .font(.bold(17))
-                        .foregroundColor(.white)
+                        .foregroundColor(isInvertStyle ? .primaryAction : .white)
                 }
             }
             .frame(height: 50)
@@ -31,6 +39,6 @@ struct SubmitButton: View {
 
 struct SubmitButton_Previews: PreviewProvider {
     static var previews: some View {
-        SubmitButton(submit: {})
+        SubmitButton(title: "Главная страница", isInvertStyle: true, submit: {})
     }
 }

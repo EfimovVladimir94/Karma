@@ -36,7 +36,7 @@ extension OrganizationDetailsView {
                 aboutProject
                 certs
                 helpers
-                SubmitButton {
+                SubmitButton(title: "Пожертвовать фонду") {
                     showPayment.toggle()
                 }
             }

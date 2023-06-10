@@ -53,7 +53,7 @@ struct PaymentView: View {
                 )
                 .padding(.top, 10)
                 segmentPrice
-                SubmitButton {
+                SubmitButton(title: "Пожертвовать фонду") {
                 }
                 Spacer()
             }

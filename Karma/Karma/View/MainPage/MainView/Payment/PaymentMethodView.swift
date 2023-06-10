@@ -41,9 +41,7 @@ struct PaymentMethodView: View {
             Spacer()
         }
         .sheet(isPresented: $showLinkNewCard) {
-            ZStack {
-                Color.red
-            }
+            NewCardView()
         }
        
     }
