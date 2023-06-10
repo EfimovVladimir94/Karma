@@ -11,6 +11,7 @@ struct ThanksView: View {
     var body: some View {
         VStack(spacing: 0) {
             Image("LaunchLogo")
+                .resizable()
                 .frame(width: 227, height: 157, alignment: .center)
                 .padding(.top, 70)
             Text("Спасибо! \n Ваше пожертвование успешно доставлено фонду!")
