@@ -23,16 +23,24 @@ struct WidgetPointsView: View {
                     }
                     .padding(.top, 8)
                     Spacer()
+                    Image("stackcoins")
+                        .resizable()
+                        .frame(width: 115, height: 115)
                     Image("Hint")
                         .frame(width: 16, height: 16)
                 }
-                Text("Нажмите, чтобы потратить")
+                Text("Узнать подробнее")
                     .font(.medium(13))
                     .foregroundColor(.gray)
-                    .padding(.top)
             }
             .padding(.horizontal, 27)
             .padding(.vertical, 9)
         }
+    }
+}
+
+struct WidgetPointsView_Previews: PreviewProvider {
+    static var previews: some View {
+        WidgetPointsView()
     }
 }

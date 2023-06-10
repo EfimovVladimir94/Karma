@@ -60,7 +60,7 @@ struct ProfileView: View {
                     .foregroundColor(.black)
             }
             Spacer()
-            Image("BurgerMenu")
+            Image("settings")
                 .frame(width: 40, height: 40)
                 .onTapGesture {
                     showSettings.toggle()
