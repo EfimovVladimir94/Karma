@@ -10,7 +10,10 @@ import SwiftUI
 struct SubmitButton: View {
     var title = ""
     var isInvertStyle = false
+    var fontSize: CGFloat = 17
+    var height: CGFloat = 50
     var submit: (() -> ())
+    
     var body: some View {
         HStack {
             Button {
@@ -24,15 +27,12 @@ struct SubmitButton: View {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundColor(.primaryAction)
                     }
-                    
                     Text(title)
-                        .font(.bold(17))
+                        .font(.bold(fontSize))
                         .foregroundColor(isInvertStyle ? .primaryAction : .white)
                 }
             }
-            .frame(height: 50)
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
+            .frame(height: height)
         }
     }
 }

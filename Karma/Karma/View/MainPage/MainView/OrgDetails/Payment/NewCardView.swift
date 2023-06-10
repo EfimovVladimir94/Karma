@@ -54,11 +54,13 @@ struct NewCardView: View {
                         }
                         Spacer()
                     }
+                    SubmitButton(title: "Сохранить карту") {
+                        
+                    }
+                    .padding(.top, 10)
                 }
                 .padding(.horizontal, 30)
-                SubmitButton(title: "Сохранить карту") {
-                    
-                }
+               
                 Spacer()
             }
             .padding(.horizontal, 15)

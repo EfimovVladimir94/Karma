@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ThanksView: View {
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 20) {
             Image("LaunchLogo")
                 .resizable()
                 .frame(width: 227, height: 157, alignment: .center)
@@ -18,7 +18,6 @@ struct ThanksView: View {
                 .font(.medium(20))
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
-                .padding(.top, 20)
             SubmitButton(title: "Главная страница") {
                 
             }

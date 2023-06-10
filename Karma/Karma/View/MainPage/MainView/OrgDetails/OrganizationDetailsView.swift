@@ -39,6 +39,7 @@ extension OrganizationDetailsView {
                 SubmitButton(title: "Пожертвовать фонду") {
                     showPayment.toggle()
                 }
+                .padding(.top, 20)
             }
             .padding(.horizontal, 29)
         }

@@ -48,6 +48,7 @@ struct WidgetAchievementView: View {
                 showAchievements = true
             }
             .padding(.horizontal, 5)
+            .padding(.top, 20)
         }
         .padding(.vertical, 15)
         .sheet(isPresented: $showAchievements) {
