@@ -9,8 +9,7 @@ import SwiftUI
 
 struct NewsView: View {
     @ObservedObject var viewModel = NewsViewModel()
-    var news = 5
-    
+    @State var showNewsDetails = false
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -23,7 +22,9 @@ struct NewsView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     ForEach(viewModel.news) { item in
-                        NewsItemViewCell(item: item)
+                        NewsItemViewCell(item: item) {
+                            showNewsDetails.toggle()
+                        }
                     }
                 }
                 .padding(.top, 25)
@@ -32,6 +33,9 @@ struct NewsView: View {
             Spacer()
         }
         .padding(.horizontal, 10)
+        .sheet(isPresented: $showNewsDetails) {
+            NewsDetailsView()
+        }
     }
 }
 
